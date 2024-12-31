@@ -1,50 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false); // State for mobile menu visibility
+
   return (
-    <nav className="w-full fixed top-0 left-0 bg-maroon p-4 z-10">
-      <div className="flex items-center justify-between">
-        {/* Logo on the left */}
-        <div className="flex items-center ml-4"> {/* Added ml-4 for slight margin from left */}
-          <img 
-            src="/assets/images/NatyaDarpan1.png" 
-            alt="Logo" 
-            className="h-20 object-contain" // Logo size increased to 20
-          />
+    <nav className="w-full fixed top-0 left-0 bg-white shadow-md z-50">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+        <div className="flex items-center">
+          <Link to="/">
+            <img 
+              src="/assets/images/NatyaDarpan1.png" 
+              alt="Logo" 
+              className="h-16 object-contain"
+            />
+          </Link>
         </div>
 
-        {/* Centered Navigation Links */}
-        <div className="flex flex-1 justify-center items-center space-x-6"> {/* Centering links and reducing space between them */}
-          <a 
-            href="/" 
-            className="text-golden-yellow hover:text-emerald-green transition-colors duration-300"
+      
+        <button 
+          className="block lg:hidden"
+          onClick={() => setIsOpen(!isOpen)} // Toggle mobile menu visibility
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            // xmlns="http://www.w3.org/2000/svg"
           >
-            Home
-          </a>
-          <a 
-            href="/about" 
-            className="text-golden-yellow hover:text-emerald-green transition-colors duration-300"
-          >
-            About
-          </a>
-          <a 
-            href="/contact" 
-            className="text-golden-yellow hover:text-emerald-green transition-colors duration-300"
-          >
-            Learn
-          </a>
-          <a 
-            href="/gallery" 
-            className="text-golden-yellow hover:text-emerald-green transition-colors duration-300"
-          >
-            Gallery
-          </a>
-          <a 
-            href="/store" 
-            className="text-golden-yellow hover:text-emerald-green transition-colors duration-300"
-          >
-            Store
-          </a>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        {/* Navigation Links */}
+        <div className={`flex space-x-6 ${isOpen ? 'block' : 'hidden'} lg:flex`}>
+          <ul className="flex space-x-4">
+            <li>
+              <Link className="text-black hover:text-emerald-400 transition-colors" to="/">Home</Link>
+            </li>
+            <li>
+              <Link className="text-black hover:text-emerald-400 transition-colors" to="/about">About</Link>
+            </li>
+            <li>
+              <Link className="text-black hover:text-emerald-400 transition-colors" to="/learn">Learn</Link>
+            </li>
+            <li>
+              <Link className="text-black hover:text-emerald-400 transition-colors" to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link className="text-black hover:text-emerald-400 transition-colors" to="/store">Store</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
