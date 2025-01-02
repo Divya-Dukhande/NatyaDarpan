@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
-// import About from './About';
+import About from './Pages/About';
 // import Contact from './Contact';
 // import Gallery from './Gallery';
 // import Store from './Store';
@@ -16,10 +16,10 @@ const App = () => {
         <main className='flex flex-1'>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/store" element={<Store />} /> */}
+            <Route path="/store" element={<Store />} /> */ }
           </Routes>
         </main>
         <Footer />

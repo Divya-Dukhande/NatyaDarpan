@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  // Animation variants for text
   const fadeInVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
