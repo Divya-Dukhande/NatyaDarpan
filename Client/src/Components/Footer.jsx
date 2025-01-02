@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Left Section: Logo and Info */}
           <div className="w-full md:w-1/3 text-center md:text-left">
             <img
-              src="/assets/images/NatyaDarpan1.png"
+              src="/assets/images/NatyaDarpan.png"
               alt="Logo"
               className="h-16 object-contain mb-2 mx-auto md:mx-0"
             />
