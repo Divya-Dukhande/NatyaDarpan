@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 
 const Learn = () => {
   const categories = [
-    { id: "1", name: "One Hand Movements", image: "/assets/images/Pataka.png" },
-    { id: "2", name: "Two Hand Movements", image: "/assets/images/Pataka.png" },
+    { id: "1", name: "One Hand Movements", image: "/assets/images/One hand.png" },
+    { id: "2", name: "Two Hand Movements", image: "/assets/images/Two hand.png" },
+    { id: "3", name: "Leg Movements", image: "/assets/images/Pataka.png" },
+    { id: "4", name: "Neck Movements", image: "/assets/images/Pataka.png" },
+    { id: "5", name: "Head Movements", image: "/assets/images/Pataka.png" },
+    { id: "6", name: "Eyes Movements", image: "/assets/images/Pataka.png" },
   ];
 
   return (
