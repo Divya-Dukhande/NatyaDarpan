@@ -50,9 +50,9 @@ const Navbar = () => {
             <li>
               <Link className="text-black hover:text-emerald-400 transition-colors" to="/learn">Learn</Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="text-black hover:text-emerald-400 transition-colors" to="/gallery">Gallery</Link>
-            </li>
+            </li> */}
             <li>
               <Link className="text-black hover:text-emerald-400 transition-colors" to="/store">Store</Link>
             </li>

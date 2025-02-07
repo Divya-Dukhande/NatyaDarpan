@@ -16,7 +16,7 @@ import AuthLogin from './Pages/Authentication/Login';
 import AuthRegister from './Pages/Authentication/Registeration';
 const App = () => {
   return (
-    <Router>
+    // <Router>
       <div className='min-h-screen flex flex-col'>
         <Navbar />
         <main className='flex flex-1'>
@@ -36,7 +36,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-    </Router>
+    // </Router>
   );
 };
 
