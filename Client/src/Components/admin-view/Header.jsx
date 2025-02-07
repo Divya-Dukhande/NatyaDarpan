@@ -1,7 +1,7 @@
 
 
 
-function AdminHeaderr(){
+function AdminHeader(){
     return(
         <div className="">Admin Side bar</div>
     );
