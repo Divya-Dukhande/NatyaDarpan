@@ -9,3 +9,5 @@ function ShoppingHeader() {
         </div>
     );
 }
+
+export default ShoppingHeader;

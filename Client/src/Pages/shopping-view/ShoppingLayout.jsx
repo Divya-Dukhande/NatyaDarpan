@@ -2,7 +2,7 @@
 
 
 
-function shoppingLayout(){
+ function shoppingLayout(){
     return(
         <div className="flex flex-col bg-white overflow-hidden">
             {/*Common header*/}
@@ -13,3 +13,6 @@ function shoppingLayout(){
         </div>
     )
 }
+
+
+export default shoppingLayout;

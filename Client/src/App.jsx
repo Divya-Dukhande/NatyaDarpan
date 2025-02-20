@@ -15,6 +15,9 @@ import AdminFeatures from './Pages/admin-view/AdminFeatures';
 import AuthLogin from './Pages/Authentication/Login';
 import AuthRegister from './Pages/Authentication/Registeration';
 import ShoppingCheckout from './Pages/shopping-view/Checkout';
+import ShoppingHome from './Pages/shopping-view/ShoppingHome'
+import ShoppingListing from './Pages/shopping-view/ShoppingList'
+
 const App = () => {
   return (
     // <Router>
@@ -37,9 +40,9 @@ const App = () => {
           <Route path="/shop" element={<shoppingLayout />}>
             <Route path="home" element={<ShoppingHome />} />
             <Route path="Listing" element={<ShoppingListing />} />
-            <Route path="Checkout" element={<ShoppingCheckout />} />
-            <Route path="Account" element={<ShoppingAccount />} />
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="Checkout" element={<ShoppingCheckout />} />
+            <Route path="Account" element={<ShoppingAccount />} /> */}
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
 
 
