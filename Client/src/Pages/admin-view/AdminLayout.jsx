@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const ShoppingLayout = () => {
+const AdminLayout = () => {
   return (
     <div>
-      <h1>Shopping Section</h1>
+      <h1>Admin Panel</h1>
       <Outlet /> {/* Child routes will render here */}
     </div>
   );
 };
 
-export default ShoppingLayout;
+export default AdminLayout;
