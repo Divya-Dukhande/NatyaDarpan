@@ -70,6 +70,7 @@ import Learn from './Pages/Learn';
 // Authentication
 import AuthLogin from './Pages/Authentication/Login';
 import AuthRegister from './Pages/Authentication/Registeration';
+import AuthLayout from './Pages/Authentication/AuthLayout'; // Added missing import
 
 // Admin Views
 import AdminLayout from './Components/admin-view/Layout';
@@ -89,8 +90,13 @@ import NotFound from './Pages/not-found';
 
 // Store Page
 import Store from './Store';
+import CheckAuth from './Components/common/check-auth';
+import UnauthPage from './Pages/unauth-page';
 
 const App = () => {
+  const isAuthenticated = false;
+  const user = null;
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
@@ -103,9 +109,22 @@ const App = () => {
             <Route path="/learn" element={<Learn />} />
             <Route path="/login" element={<AuthLogin />} />
             <Route path="/register" element={<AuthRegister />} />
-            
+
+            {/* Authentication */}
+            <Route path="/auth/*" element={
+              <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+                <AuthLayout />
+              </CheckAuth>
+            } />
+
+
+
             {/* Admin Routes */}
-            <Route path="/admin/*" element={<AdminLayout />}>
+            <Route path="/admin/*" element={
+              <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+                <AdminLayout />
+              </CheckAuth>
+            }>
               <Route index element={<AdminDashboard />} />
               <Route path="dashboard" element={<AdminDashboard />} />
               <Route path="products" element={<AdminProducts />} />
@@ -113,19 +132,26 @@ const App = () => {
               <Route path="features" element={<AdminFeatures />} />
             </Route>
 
+
             {/* Shopping Routes */}
-            <Route path="/shop/*" element={<ShoppingLayout />}>
+            <Route path="/shop/*" element={
+              <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+                <ShoppingLayout/>
+              </CheckAuth>
+            }>
               <Route index element={<ShoppingHome />} />
               <Route path="home" element={<ShoppingHome />} />
               <Route path="listing" element={<ShoppingListing />} />
               <Route path="checkout" element={<ShoppingCheckout />} />
             </Route>
 
+
             {/* Store Route */}
             <Route path="/store" element={<Store />} />
 
             {/* 404 Page */}
             <Route path="*" element={<NotFound />} />
+            <Route path="/unauth-page" element={<UnauthPage/>} />
           </Routes>
         </main>
         <Footer />
