@@ -68,37 +68,36 @@ import About from './Pages/About';
 import Learn from './Pages/Learn';
 
 // Authentication
-import AuthLogin from './Pages/Authentication/Login';
-import AuthRegister from './Pages/Authentication/Registeration';
-import AuthLayout from './Pages/Authentication/AuthLayout'; // Added missing import
+// import AuthLogin from './Pages/Authentication/Login';
+// import AuthRegister from './Pages/Authentication/Registeration';
+// import AuthLayout from './Pages/Authentication/AuthLayout'; // Added missing import
 
 // Admin Views
-import AdminLayout from './Components/admin-view/Layout';
-import AdminDashboard from './Pages/admin-view/Dashboard';
-import AdminProducts from './Pages/admin-view/Products';
-import AdminOrders from './Pages/admin-view/Orders';
-import AdminFeatures from './Pages/admin-view/AdminFeatures';
+// import AdminLayout from './Components/admin-view/Layout';
+// import AdminDashboard from './Pages/admin-view/Dashboard';
+// import AdminProducts from './Pages/admin-view/Products';
+// import AdminOrders from './Pages/admin-view/Orders';
+// import AdminFeatures from './Pages/admin-view/AdminFeatures';
 
 // Shopping Views
-import ShoppingLayout from './Pages/shopping-view/ShoppingLayout';
-import ShoppingHome from './Pages/shopping-view/ShoppingHome';
-import ShoppingListing from './Pages/shopping-view/ShoppingList';
-import ShoppingCheckout from './Pages/shopping-view/Checkout';
+// import ShoppingLayout from './Pages/shopping-view/ShoppingLayout';
+// import ShoppingHome from './Pages/shopping-view/ShoppingHome';
+// import ShoppingListing from './Pages/shopping-view/ShoppingList';
+// import ShoppingCheckout from './Pages/shopping-view/Checkout';
 
 // 404 Not Found
 import NotFound from './Pages/not-found';
 
 // Store Page
-import Store from './Store';
-import CheckAuth from './Components/common/check-auth';
-import UnauthPage from './Pages/unauth-page';
+// import Store from './Store';
+// import CheckAuth from './Components/common/check-auth';
+// import UnauthPage from './Pages/unauth-page';
 
 const App = () => {
   const isAuthenticated = false;
   const user = null;
 
   return (
-    <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
@@ -107,20 +106,20 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/learn" element={<Learn />} />
-            <Route path="/login" element={<AuthLogin />} />
-            <Route path="/register" element={<AuthRegister />} />
+            {/* <Route path="/login" element={<AuthLogin />} />
+            <Route path="/register" element={<AuthRegister />} /> */}
 
             {/* Authentication */}
-            <Route path="/auth/*" element={
+            {/* <Route path="/auth/*" element={
               <CheckAuth isAuthenticated={isAuthenticated} user={user}>
                 <AuthLayout />
               </CheckAuth>
-            } />
+            } /> */}
 
 
 
             {/* Admin Routes */}
-            <Route path="/admin/*" element={
+            {/* <Route path="/admin/*" element={
               <CheckAuth isAuthenticated={isAuthenticated} user={user}>
                 <AdminLayout />
               </CheckAuth>
@@ -130,11 +129,11 @@ const App = () => {
               <Route path="products" element={<AdminProducts />} />
               <Route path="orders" element={<AdminOrders />} />
               <Route path="features" element={<AdminFeatures />} />
-            </Route>
+            </Route> */}
 
 
             {/* Shopping Routes */}
-            <Route path="/shop/*" element={
+            {/* <Route path="/shop/*" element={
               <CheckAuth isAuthenticated={isAuthenticated} user={user}>
                 <ShoppingLayout/>
               </CheckAuth>
@@ -143,20 +142,19 @@ const App = () => {
               <Route path="home" element={<ShoppingHome />} />
               <Route path="listing" element={<ShoppingListing />} />
               <Route path="checkout" element={<ShoppingCheckout />} />
-            </Route>
+            </Route> */}
 
 
             {/* Store Route */}
-            <Route path="/store" element={<Store />} />
+            {/* <Route path="/store" element={<Store />} /> */}
 
             {/* 404 Page */}
             <Route path="*" element={<NotFound />} />
-            <Route path="/unauth-page" element={<UnauthPage/>} />
+            {/* <Route path="/unauth-page" element={<UnauthPage/>} /> */}
           </Routes>
         </main>
         <Footer />
       </div>
-    </Router>
   );
 };
 
