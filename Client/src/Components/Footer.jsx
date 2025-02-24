@@ -1,7 +1,11 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-const Footer = () => {
+const Footer = ({ isAdmin }) => {
+  // Only render the navbar if the user is not an admin
+  if (isAdmin) {
+    return null; // Return nothing if user is an admin
+  }
   return (
     <footer className="bg-white py-8 shadow-xl border-t border-gray-400 mt-auto">
       <div className="container mx-auto px-4 md:px-6">
