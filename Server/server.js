@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 {/*Creating a database*/}
-mongoose.connect("mongodb+srv://ddukhande06:divya0615@cluster0.nv1w8.mongodb.net/")
+mongoose.connect("")
 .then(()=>console.log("MongoDB connected"))
 .catch((error) => console.log(error));
 
