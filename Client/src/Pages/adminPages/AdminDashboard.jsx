@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { FaUser, FaBars, FaSignOutAlt } from "react-icons/fa";
 import UserManagement from "../../Components/Admin/UserManagement";
+import ProductManagement from "../../Components/Admin/ProductManagement";
 import { selectUser, logout } from "../../redux/features/auth/authSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
