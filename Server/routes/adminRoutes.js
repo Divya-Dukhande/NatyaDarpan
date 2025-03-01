@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const { createUser, getUsers, getUserById, updateUser, deleteUser } = require('../controllers/adminController');
-const { createProduct, getProducts, deleteProduct } = require('../controllers/productController');
+const { createProduct, getProducts, deleteProduct, updateProduct } = require('../controllers/productController');
 
 const authenticate = require('../middlewares/authMiddleware');
 
 
-    {/*User Routes*/}
+{/*User Routes*/ }
 // Create a new user
 router.post('/users', authenticate, createUser);
 
@@ -24,9 +24,9 @@ router.delete('/users/:id', authenticate, deleteUser);
 
 
 
-{/*Product Routes*/}
+{/*Product Routes*/ }
 //Add a new Product
-router.post('/products', authenticate, createProduct); 
+router.post('/products', authenticate, createProduct);
 
 //Get all products
 router.get('/products', authenticate, getProducts);
@@ -34,6 +34,8 @@ router.get('/products', authenticate, getProducts);
 //Delete a product by Id
 router.delete('/products/:id', authenticate, deleteProduct);
 
+
+router.put('/products/:id', authenticate, updateProduct);
 
 
 module.exports = router;

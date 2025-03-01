@@ -16,7 +16,7 @@ const AdminDashboard = () => {
 
     const menuItems = [
         { key: "user", label: "User", icon: <FaUser /> },
-        // { key: "product", label: "Product", icon: <FaUser /> },
+        { key: "product", label: "Product", icon: <FaUser /> },
         // Add more menu items as needed
     ];
 
@@ -65,7 +65,7 @@ const AdminDashboard = () => {
                 {/* Dynamic Content */}
                 <div className="mt-4">
                     {activeTab === "user" && <UserManagement />}
-                    {/* {activeTab === "product" && <ProductManagement />} */}
+                    {activeTab === "product" && <ProductManagement />} 
                 </div>
             </div>
         </div>
