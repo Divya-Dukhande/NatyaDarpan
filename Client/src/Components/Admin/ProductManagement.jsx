@@ -118,7 +118,7 @@ const ProductManagement = () => {
                         value={product.name}
                         onChange={handleChange}
                         required
-                        className="w-full p-2 border rounded"
+                        className="w-full h-48 object-cover rounded-t-lg"
                     />
                     <input
                         type="number"
@@ -163,7 +163,7 @@ const ProductManagement = () => {
                             <img
                                 src={p.image}
                                 alt={p.name}
-                                className="w-20 h-20 object-cover rounded-md mr-4"
+                                className="w-full h-auto max-h-64 object-contain"
                             />
                             <div>
                                 <span className="font-semibold">{p.name} - ₹{p.price}</span>
@@ -195,3 +195,5 @@ const ProductManagement = () => {
 };
 
 export default ProductManagement;
+
+
