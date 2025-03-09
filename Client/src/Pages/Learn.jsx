@@ -189,43 +189,29 @@ const Learn = () => {
         },
       ],
     },
-    "3": {
-      name: "Leg Movements",
-      items: [
-        {
-          name: "Leg Movement 1",
-          image: "/assets/images/LegMovements/Leg1.png",
-          meaning: "Description 1"
-        },
-        {
-          name: "Leg Movement 2",
-          image: "/assets/images/LegMovements/Leg2.png",
-          meaning: "Description 2"
-        },
-      ],
-    },
+    
     "4": {
       name: "Neck Movements",
       items: [
         {
-          name: "Sundari",
-          image: "/assets/images/Neck Movements/Neck1.png",
-          meaning: "Description 1"
+          name: "Sundari Griva",
+          image: "/assets/images/Neck Movements/Sundari.png",
+          meaning: "Moves from side to side"
         },
         {
-          name: "Tirashchina",
-          image: "/assets/images/Neck Movements/Neck2.png",
-          meaning: "Description 2"
+          name: "Tirashcina Griva",
+          image: "/assets/images/Neck Movements/Tirascina.png",
+          meaning: "Moves in a V-shape"
         },
         {
-          name: "Parivartita",
-          image: "/assets/images/Neck Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Parivartita Griva",
+          image: "/assets/images/Neck Movements/Parivartita.png",
+          meaning: "Moves in a semicircle or moon-like shape"
         },
         {
-          name: "Prakampita",
-          image: "/assets/images/Neck Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Prakampita Griva",
+          image: "/assets/images/Neck Movements/Prakampita.png",
+          meaning: "Moves in forward and backward"
         },
       ],
     },
@@ -233,49 +219,49 @@ const Learn = () => {
       name: "Head Movements",
       items: [
         {
-          name: "Sama",
-          image: "/assets/images/Head Movements/Sama.png",
-          meaning: "Level head"
+          name: "Samasirah",
+          image: "/assets/images/Sama.png",
+          meaning: "Sama"
         },
         {
           name: "Udvahitam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          image: "/assets/images/Head Movements/Udvahita.png",
+          meaning: "Up Raised"
         },
         {
-          name: "Adhomukham",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Adhomukhasirah",
+          image: "/assets/images/Head Movements/Adhomukha.png",
+          meaning: "Bent"
         },
         {
-          name: "Alolitam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Alolitasirah",
+          image: "/assets/images/Head Movements/Alolita.png",
+          meaning: "Rolling"
         },
         {
-          name: "Dhutam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Dhutasirah",
+          image: "/assets/images/Head Movements/Udvahita.png",
+          meaning: "Side Movement"
         },
         {
-          name: "Kampitam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Kampitasirah",
+          image: "/assets/images/Head Movements/Kampita.png",
+          meaning: "Nodding"
         },
         {
-          name: "Paravrittam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Paravrittasirah",
+          image: "/assets/images/Head Movements/Paravrtta.png",
+          meaning: "Turned face"
         },
         {
-          name: "Utkshiptam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Utkshiptasirah",
+          image: "/assets/images/Head Movements/Utksipta.png",
+          meaning: "Turned upwards"
         },
         {
-          name: "Parivahittam",
-          image: "/assets/images/Head Movements/Udvahitam.png",
-          meaning: "Raised head"
+          name: "Parivahittasirah",
+          image: "/assets/images/Head Movements/Parivahita.png",
+          meaning: "Extensivelt moved"
         },
       ],
     },
