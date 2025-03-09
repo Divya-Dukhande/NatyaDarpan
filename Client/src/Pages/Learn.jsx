@@ -270,43 +270,43 @@ const Learn = () => {
       items: [
         {
           name: "Samadrishti",
-          image: "/assets/images/Eyes Movements/Samadrstih.png",
-          meaning: "Straight gaze"
+          image: "/assets/images/Samadrstih.png",
+          meaning: "Static eye-lashes"
         },
         {
-          name: "Alokitam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Alokitadrstih",
+          image: "/assets/images/Eyes Movements/Alokita.png",
+          meaning: "Roll the eyeballs in a circular pattern"
         },
         {
-          name: "Saachi",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Sachi",
+          image: "/assets/images/Eyes Movements/Saci.png",
+          meaning: "Look through the corner of the eyes"
         },
         {
-          name: "Pralokitam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Pralokitadrstih",
+          image: "/assets/images/Eyes Movements/Alokita.png",
+          meaning: " Move the eyes side to side"
         },
         {
-          name: "Nimilitam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Nimilitadrstih",
+          image: "/assets/images/Eyes Movements/Nimilita.png",
+          meaning: "Keep the eyes half closed"
         },
         {
-          name: "Ullokitam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Ullokitadrstih",
+          image: "/assets/images/Eyes Movements/Ullokita.png",
+          meaning: " Look upwards"
         },
         {
-          name: "Anuvrittam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Anuvrittadrstih",
+          image: "/assets/images/Eyes Movements/Anuvrtta.png",
+          meaning: "Move the eyes up and down rapidly"
         },
         {
-          name: "Avalokitam",
-          image: "/assets/images/Eyes Movements/Alokitam.png",
-          meaning: "Circular gaze"
+          name: "Avalokitadrstih",
+          image: "/assets/images/Eyes Movements/Avalokita.png",
+          meaning: "Look down"
         },
       ],
     },
