@@ -5,7 +5,7 @@ const Learn = () => {
 
   const categories = [
     { id: "1", name: "One Hand Movements", image: "/assets/images/Pataka.png" },
-    { id: "2", name: "Two Hand Movements", image: "/assets/images/anjalihastah.png" },
+    { id: "2", name: "Two Hand Movements", image: "/assets/images/Anjalihastah.png" },
     { id: "3", name: "Leg Movements", image: "/assets/images/Leg.png" },
     { id: "4", name: "Neck Movements", image: "/assets/images/Neck.png" },
     { id: "5", name: "Head Movements", image: "/assets/images/Sama.png" },
@@ -27,163 +27,164 @@ const Learn = () => {
           meaning: "Three Parts of Flag"
         },
         {
-          name: "Ardhapatakahastah", 
+          name: "Ardhapatakahastah",
           image: "/assets/images/One Hand Movements/Ardhapataka.png",
           meaning: "Half-Flag"
         },
         {
-          name: "Kartarimukhahastah", 
+          name: "Kartarimukhahastah",
           image: "/assets/images/One Hand Movements/Kartarimukha.png",
           meaning: "The face of a scissor"
         },
         {
-          name: "Mayurahastah", 
+          name: "Mayurahastah",
           image: "/assets/images/One Hand Movements/Mayura.png",
           meaning: "Peacock"
         },
         {
-          name: "Ardhacandrahastah", 
+          name: "Ardhacandrahastah",
           image: "/assets/images/One Hand Movements/Ardhacandra.png",
           meaning: "Half Moon"
         },
         {
-          name: "Aralahastah", 
+          name: "Aralahastah",
           image: "/assets/images/One Hand Movements/Arala.png",
           meaning: "Slightly bent or curved fingers"
         },
         {
-          name: "Sukatundahastah", 
+          name: "Sukatundahastah",
           image: "/assets/images/One Hand Movements/Sukatunda.png",
           meaning: "Parrot's beak"
         },
         {
-          name: "Mushtihastah", 
+          name: "Mushtihastah",
           image: "/assets/images/One Hand Movements/Musti.png",
           meaning: "Fist"
         },
         {
-          name: "Sikharahastah", 
+          name: "Sikharahastah",
           image: "/assets/images/One Hand Movements/Sikhara.png",
           meaning: "Peak"
         },
         {
-          name: "Kapitthahastah", 
+          name: "Kapitthahastah",
           image: "/assets/images/One Hand Movements/Kapittaha.png",
           meaning: "Wood Apple"
         },
         {
-          name: "Sucihastah", 
+          name: "Sucihastah",
           image: "/assets/images/One Hand Movements/Suci.png",
           meaning: "Needle pointed"
         },
         {
-          name: "Candrakalahastah", 
+          name: "Candrakalahastah",
           image: "/assets/images/One Hand Movements/Candrakala.png",
           meaning: "Cresent Moon"
         },
         {
-          name: "Padmakosahastah", 
+          name: "Padmakosahastah",
           image: "/assets/images/One Hand Movements/Padmakosa.png",
           meaning: "Lotus Bud"
-        }, 
+        },
         {
-          name: "Sarpasirsahastah", 
+          name: "Sarpasirsahastah",
           image: "/assets/images/One Hand Movements/Sarpasirsaha.png",
           meaning: "Snake Head"
-        }, 
+        },
         {
-          name: "Mrgasirsahastah", 
+          name: "Mrgasirsahastah",
           image: "/assets/images/One Hand Movements/Mrgasirsaha.png",
           meaning: "Deer Head"
-        }, 
+        },
         {
-          name: "Simhamukhahastah", 
+          name: "Simhamukhahastah",
           image: "/assets/images/One Hand Movements/Simhamukha.png",
           meaning: "Lion-face"
-        }, 
+        },
         {
-          name: "Kangulahastah", 
+          name: "Kangulahastah",
           image: "/assets/images/One Hand Movements/Kangula.png",
           meaning: "Little finger is curved or bent like a bud."
-        }, 
+        },
         {
-          name: "Alapadmahastah", 
+          name: "Alapadmahastah",
           image: "/assets/images/One Hand Movements/Alapadma.png",
           meaning: "Moving Lotus"
-        }, 
+        },
         {
-          name: "Caturahastah", 
+          name: "Caturahastah",
           image: "/assets/images/One Hand Movements/Catura.png",
           meaning: "Dexterous"
-        }, 
+        },
         {
-          name: "Bhramarahastah", 
+          name: "Bhramarahastah",
           image: "/assets/images/One Hand Movements/Bhramara.png",
           meaning: "Bee-shaped"
-        }, 
+        },
         {
-          name: "Hamsasyahastah", 
+          name: "Hamsasyahastah",
           image: "/assets/images/One Hand Movements/Hamasasya.png",
           meaning: "Swan face"
-        }, 
+        },
         {
-          name: "Hamsapakshahastah", 
+          name: "Hamsapakshahastah",
           image: "/assets/images/One Hand Movements/Hamsapaksha.png",
           meaning: "Swan - wing"
-        }, 
+        },
         {
-          name: "Sandamsahastah", 
+          name: "Sandamsahastah",
           image: "/assets/images/One Hand Movements/Sandamsa.png",
           meaning: "Pincers"
-        }, 
+        },
         {
-          name: "Mukulashastah", 
+          name: "Mukulashastah",
           image: "/assets/images/One Hand Movements/Mukula.png",
           meaning: "Pincers"
-        }, 
+        },
         {
-          name: "Tamracudahastah", 
+          name: "Tamracudahastah",
           image: "/assets/images/One Hand Movements/Tamracuda.png",
           meaning: "Cock"
-        }, 
+        },
         {
-          name: "Trisulahastah", 
+          name: "Trisulahastah",
           image: "/assets/images/One Hand Movements/Trisula.png",
           meaning: "Trident"
-        }, 
+        },
         {
-          name: "Vyaghrahastah", 
+          name: "Vyaghrahastah",
           image: "/assets/images/One Hand Movements/Vyagra.png",
           meaning: "Tige"
-        }, 
+        },
         {
-          name: "Ardhasucihastah", 
+          name: "Ardhasucihastah",
           image: "/assets/images/One Hand Movements/Ardhasuci.png",
           meaning: "Half Indicatory"
-        }, 
+        },
         {
-          name: "katakahastah", 
+          name: "katakahastah",
           image: "/assets/images/One Hand Movements/Kataka.png",
           meaning: "Bracelet"
-        }, 
+        },
         {
-          name: "Vallihastah", 
+          name: "Vallihastah",
           image: "/assets/images/One Hand Movements/Sandamsa.png",
           meaning: "Creeper/Hut"
-        }, 
+        },
       ],
     },
+
     "2": {
       name: "Two Hand Movements",
       items: [
         {
           name: "Anjali",
-          image: "/assets/images/TwoHandMovements/Anjalihastah.png",
+          image: "/assets/images/Anjalihastah.png",
           meaning: "Salutation"
         },
         {
           name: "Kapotha",
-          image: "/assets/images/TwoHandMovements/Kapotahastah.png",
+          image: "/assets/images/Two Hand Movements/Kapotahastah.png",
           meaning: "Pigeon"
         },
       ],
@@ -207,14 +208,24 @@ const Learn = () => {
       name: "Neck Movements",
       items: [
         {
-          name: "Neck Movement 1",
-          image: "/assets/images/NeckMovements/Neck1.png",
+          name: "Sundari",
+          image: "/assets/images/Neck Movements/Neck1.png",
           meaning: "Description 1"
         },
         {
-          name: "Neck Movement 2",
-          image: "/assets/images/NeckMovements/Neck2.png",
+          name: "Tirashchina",
+          image: "/assets/images/Neck Movements/Neck2.png",
           meaning: "Description 2"
+        },
+        {
+          name: "Parivartita",
+          image: "/assets/images/Neck Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Prakampita",
+          image: "/assets/images/Neck Movements/Alokitam.png",
+          meaning: "Circular gaze"
         },
       ],
     },
@@ -223,12 +234,47 @@ const Learn = () => {
       items: [
         {
           name: "Sama",
-          image: "/assets/images/HeadMovements/Sama.png",
+          image: "/assets/images/Head Movements/Sama.png",
           meaning: "Level head"
         },
         {
           name: "Udvahitam",
-          image: "/assets/images/HeadMovements/Udvahitam.png",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Adhomukham",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Alolitam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Dhutam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Kampitam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Paravrittam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Utkshiptam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
+          meaning: "Raised head"
+        },
+        {
+          name: "Parivahittam",
+          image: "/assets/images/Head Movements/Udvahitam.png",
           meaning: "Raised head"
         },
       ],
@@ -238,12 +284,42 @@ const Learn = () => {
       items: [
         {
           name: "Samadrishti",
-          image: "/assets/images/EyeMovements/Samadrstih.png",
+          image: "/assets/images/Eyes Movements/Samadrstih.png",
           meaning: "Straight gaze"
         },
         {
           name: "Alokitam",
-          image: "/assets/images/EyeMovements/Alokitam.png",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Saachi",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Pralokitam",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Nimilitam",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Ullokitam",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Anuvrittam",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
+          meaning: "Circular gaze"
+        },
+        {
+          name: "Avalokitam",
+          image: "/assets/images/Eyes Movements/Alokitam.png",
           meaning: "Circular gaze"
         },
       ],
