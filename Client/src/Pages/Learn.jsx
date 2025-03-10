@@ -197,6 +197,101 @@ const Learn = () => {
           image: "/assets/images/Two Hand Movements/Svastika.png",
           meaning: "Svastika"
         },
+        {
+          name: "Dolahastah",
+          image: "/assets/images/Two Hand Movements/Dola.png",
+          meaning: "SWing"
+        },
+        {
+          name: "Pushpaputahastah",
+          image: "/assets/images/Two Hand Movements/Puspaputa.png",
+          meaning: "Flower Basket"
+        },
+        {
+          name: "Utsangahastah",
+          image: "/assets/images/Two Hand Movements/Utsanga.png",
+          meaning: "The lap"
+        },
+        {
+          name: "Sivalingahastah",
+          image: "/assets/images/Two Hand Movements/Sivalinga.png",
+          meaning: "Sivalinga"
+        },
+        {
+          name: "Katakavardhanahastah",
+          image: "/assets/images/Two Hand Movements/Katakavardhana.png",
+          meaning: "Link of increase"
+        },
+        {
+          name: "Kartarisvastikahastah",
+          image: "/assets/images/Two Hand Movements/Kartarisvastika.png",
+          meaning: "Crossed arrows, branches, peaks, trees, etc"
+        },
+        {
+          name: "Sakatahastah",
+          image: "/assets/images/Two Hand Movements/Sakata.png",
+          meaning: "Cart"
+        },
+        {
+          name: "Sankhahastah",
+          image: "/assets/images/Two Hand Movements/Sankha.png",
+          meaning:"Conch"
+        },
+        {
+          name: "Cakrahastah",
+          image: "/assets/images/Two Hand Movements/Cakra.png",
+          meaning:"Disc"
+        },
+        {
+          name: "Samputahastah",
+          image: "/assets/images/Two Hand Movements/Samputa.png",
+          meaning:"Box"
+        },
+        {
+          name: "Pasahastah",
+          image: "/assets/images/Two Hand Movements/Pasa.png",
+          meaning:"Noose"
+        },
+        {
+          name: "Kilakahastah",
+          image: "/assets/images/Two Hand Movements/Kilaka.png",
+          meaning:"Key"
+        },
+        {
+          name: "Matsyahastah",
+          image: "/assets/images/Two Hand Movements/Matsya.png",
+          meaning:"Fish"
+        },
+        {
+          name: "Kurmahastah",
+          image: "/assets/images/Two Hand Movements/Kurma.png",
+          meaning:"Tortoise"
+        },
+        {
+          name: "Varahahastah",
+          image: "/assets/images/Two Hand Movements/Varaha.png",
+          meaning:"Boar"
+        },
+        {
+          name: "Garudahastah",
+          image: "/assets/images/Two Hand Movements/Garuda.png",
+          meaning:"Hawk"
+        },
+        {
+          name: "Nagabandhahastah",
+          image: "/assets/images/Two Hand Movements/Nagabandha.png",
+          meaning:"Twining of snake"
+        },
+        {
+          name: "Khatvahastah",
+          image: "/assets/images/Two Hand Movements/Khatva.png",
+          meaning:"Cot"
+        },
+        {
+          name: "Bherundahastah",
+          image: "/assets/images/Two Hand Movements/Bherunda.png",
+          meaning:"Bird"
+        },
       ],
     },
     
