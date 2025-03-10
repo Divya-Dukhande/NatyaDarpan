@@ -180,12 +180,22 @@ const Learn = () => {
         {
           name: "Anjali",
           image: "/assets/images/Anjalihastah.png",
-          meaning: "Salutation"
+          meaning: "Folded Hands"
         },
         {
-          name: "Kapotha",
-          image: "/assets/images/Two Hand Movements/Kapotahastah.png",
-          meaning: "Pigeon"
+          name: "Kapotahastah",
+          image: "/assets/images/Two Hand Movements/Kapota.png",
+          meaning: "Dove"
+        },
+        {
+          name: "Karkatahastah",
+          image: "/assets/images/Two Hand Movements/Karkata.png",
+          meaning: "Crab"
+        },
+        {
+          name: "Svastikahastah",
+          image: "/assets/images/Two Hand Movements/Svastika.png",
+          meaning: "Svastika"
         },
       ],
     },
