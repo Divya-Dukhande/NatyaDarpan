@@ -36,7 +36,7 @@ const Home = () => {
               animate="visible"
               transition={{ duration: 1.5 }}
             >
-              Angikam bhuvanam yasya vacikam sarvavanmayam।
+              आङ्गिकं भुवनं यस्य वाचिकं सर्ववाङ्मयम् ।
             </motion.p>
             <motion.p
               className="text-lg text-2xl font-semibold mt-2 text-red-700"
@@ -45,7 +45,7 @@ const Home = () => {
               animate="visible"
               transition={{ duration: 1.5, delay: 0.5 }}
             >
-              Aharyam chandrataradi tam numah sattvikam sivam।।
+              आहार्यं चन्द्रतारादि तं नुमः सात्त्विकं शिवम् ।
             </motion.p>
           </div>
         </div>
