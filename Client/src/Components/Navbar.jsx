@@ -170,12 +170,21 @@ const Navbar = ({ username, isAdmin }) => {
           {/* Authentication Buttons */}
           <div className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">
             {username ? (
-              <button
+              <div className="flex items-center space-x-4">
+                <div className="text-xl font-semibold">
+                  <span className="text-lg">Welcome, </span>
+                    <div className="text-xl text-blue-500 animate-pulse">
+                      {username} {/* Display user name with animation */}
+                    </div>
+                </div>
+                <button
                 onClick={handleLogout}
                 className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
               >
                 Logout
               </button>
+              </div>
+              
             ) : (
               <>
                 <Link to="/login" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
