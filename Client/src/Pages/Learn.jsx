@@ -32,7 +32,7 @@ const Learn = () => {
           name: "Ardhapatakahastah",
           image: "/assets/images/One Hand Movements/Ardhapataka.png",
           meaning: "Half-Flag",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/c4nGxGoO8-I?si=1wM6crINoFyc2pRe"
         },
         {
           name: "Kartarimukhahastah",
