@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Learn = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [openVideo, setOpenVideo] = useState(null);
   const categories = [
     { id: "1", name: "One Hand Movements", image: "/assets/images/Pataka.png" },
     { id: "2", name: "Two Hand Movements", image: "/assets/images/Anjalihastah.png" },
@@ -20,157 +20,187 @@ const Learn = () => {
           name: "PatakaHastah",
           image: "/assets/images/Pataka.png",
           meaning: "Flag",
-          url:'https://youtu.be/bi5oVX0Sp9s'
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Tripatakahastah",
           image: "/assets/images/One Hand Movements/Tripataka.png",
-          meaning: "Three Parts of Flag"
+          meaning: "Three Parts of Flag",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Ardhapatakahastah",
           image: "/assets/images/One Hand Movements/Ardhapataka.png",
-          meaning: "Half-Flag"
+          meaning: "Half-Flag",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Kartarimukhahastah",
           image: "/assets/images/One Hand Movements/Kartarimukha.png",
-          meaning: "The face of a scissor"
+          meaning: "The face of a scissor",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Mayurahastah",
           image: "/assets/images/One Hand Movements/Mayura.png",
-          meaning: "Peacock"
+          meaning: "Peacock",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Ardhacandrahastah",
           image: "/assets/images/One Hand Movements/Ardhacandra.png",
-          meaning: "Half Moon"
+          meaning: "Half Moon",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Aralahastah",
           image: "/assets/images/One Hand Movements/Arala.png",
-          meaning: "Slightly bent or curved fingers"
+          meaning: "Slightly bent or curved fingers",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Sukatundahastah",
           image: "/assets/images/One Hand Movements/Sukatunda.png",
-          meaning: "Parrot's beak"
+          meaning: "Parrot's beak",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Mushtihastah",
           image: "/assets/images/One Hand Movements/Musti.png",
-          meaning: "Fist"
+          meaning: "Fist",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Sikharahastah",
           image: "/assets/images/One Hand Movements/Sikhara.png",
-          meaning: "Peak"
+          meaning: "Peak",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Kapitthahastah",
           image: "/assets/images/One Hand Movements/Kapittaha.png",
-          meaning: "Wood Apple"
+          meaning: "Wood Apple",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Sucihastah",
           image: "/assets/images/One Hand Movements/Suci.png",
-          meaning: "Needle pointed"
+          meaning: "Needle pointed",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Candrakalahastah",
           image: "/assets/images/One Hand Movements/Candrakala.png",
-          meaning: "Cresent Moon"
+          meaning: "Cresent Moon",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Padmakosahastah",
           image: "/assets/images/One Hand Movements/Padmakosa.png",
-          meaning: "Lotus Bud"
+          meaning: "Lotus Bud",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Sarpasirsahastah",
           image: "/assets/images/One Hand Movements/Sarpasirsaha.png",
-          meaning: "Snake Head"
+          meaning: "Snake Head",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Mrgasirsahastah",
           image: "/assets/images/One Hand Movements/Mrgasirsaha.png",
-          meaning: "Deer Head"
+          meaning: "Deer Head",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Simhamukhahastah",
           image: "/assets/images/One Hand Movements/Simhamukha.png",
-          meaning: "Lion-face"
+          meaning: "Lion-face",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Kangulahastah",
           image: "/assets/images/One Hand Movements/Kangula.png",
-          meaning: "Little finger is curved or bent like a bud."
+          meaning: "Little finger is curved or bent like a bud.",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Alapadmahastah",
           image: "/assets/images/One Hand Movements/Alapadma.png",
-          meaning: "Moving Lotus"
+          meaning: "Moving Lotus",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Caturahastah",
           image: "/assets/images/One Hand Movements/Catura.png",
-          meaning: "Dexterous"
+          meaning: "Dexterous",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Bhramarahastah",
           image: "/assets/images/One Hand Movements/Bhramara.png",
-          meaning: "Bee-shaped"
+          meaning: "Bee-shaped",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Hamsasyahastah",
           image: "/assets/images/One Hand Movements/Hamasasya.png",
-          meaning: "Swan face"
+          meaning: "Swan face",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Hamsapakshahastah",
           image: "/assets/images/One Hand Movements/Hamsapaksha.png",
-          meaning: "Swan - wing"
+          meaning: "Swan - wing",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Sandamsahastah",
           image: "/assets/images/One Hand Movements/Sandamsa.png",
-          meaning: "Pincers"
+          meaning: "Pincers",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Mukulashastah",
           image: "/assets/images/One Hand Movements/Mukula.png",
-          meaning: "Pincers"
+          meaning: "Pincers",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Tamracudahastah",
           image: "/assets/images/One Hand Movements/Tamracuda.png",
-          meaning: "Cock"
+          meaning: "Cock",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Trisulahastah",
           image: "/assets/images/One Hand Movements/Trisula.png",
-          meaning: "Trident"
+          meaning: "Trident",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Vyaghrahastah",
           image: "/assets/images/One Hand Movements/Vyagra.png",
-          meaning: "Tige"
+          meaning: "Tige",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Ardhasucihastah",
           image: "/assets/images/One Hand Movements/Ardhasuci.png",
-          meaning: "Half Indicatory"
+          meaning: "Half Indicatory",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "katakahastah",
           image: "/assets/images/One Hand Movements/Kataka.png",
-          meaning: "Bracelet"
+          meaning: "Bracelet",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
         {
           name: "Vallihastah",
           image: "/assets/images/One Hand Movements/Sandamsa.png",
-          meaning: "Creeper/Hut"
+          meaning: "Creeper/Hut",
+          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
         },
       ],
     },
@@ -459,23 +489,54 @@ const Learn = () => {
             {images[selectedCategory]?.name}
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {images[selectedCategory]?.items.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-300 p-4 rounded-lg shadow-md flex flex-col items-center justify-center bg-white"
-              >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-32 h-32 object-contain mb-2"
-                />
-                <p className="text-lg font-semibold text-center">{item.name}</p>
-                <p className="text-sm text-gray-500 text-center">{item.meaning}</p>
-
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+      {images[selectedCategory]?.items.map((item, index) => (
+        <div
+          key={index}
+          className="border border-gray-300 rounded-lg shadow-lg bg-white transition-transform transform hover:scale-105 hover:shadow-xl overflow-hidden cursor-pointer"
+          onClick={() => setOpenVideo(item.videoUrl)}
+        >
+          <div className="flex flex-col items-center p-4">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-24 h-24 object-contain mb-3 rounded-full border border-gray-200"
+            />
+            <h3 className="text-lg font-semibold text-center mb-1 text-gray-800">
+              {item.name}
+            </h3>
+            <p className="text-sm text-gray-500 text-center mb-3">
+              {item.meaning}
+            </p>
           </div>
+        </div>
+      ))}
+
+      {/* Video Popup Modal */}
+      {openVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className="bg-white p-4 rounded-lg max-w-2xl w-full shadow-2xl transform transition-all scale-100">
+            <div className="flex justify-end">
+              <button
+                onClick={() => setOpenVideo(null)}
+                className="text-white bg-red-500 px-3 py-1 rounded-md hover:bg-red-600"
+              >
+                Close
+              </button>
+            </div>
+            <iframe
+              className="w-full h-96 rounded-lg"
+              src={openVideo}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Mudra Video"
+            ></iframe>
+          </div>
+        </div>
+      )}
+    </div>
+
         </div>
       )}
     </div>
