@@ -71,7 +71,7 @@ const App = () => {
           {/* Public Routes */}
           <Route path="/" element={admin ? <Navigate to="/admindashboard" /> : <Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={user.username?<Navigate to="/store"/>:<Login/>} />
           <Route path="/register" element={<Registration />} />
           <Route
             path="/learn"

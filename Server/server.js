@@ -10,6 +10,8 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const userRoutes = require("./routes/userRoutes")
 const adminRoutes = require("./routes/adminRoutes")
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 
 // DOTENV
@@ -24,7 +26,7 @@ const app = express();
 // MIDDLEWARES
 const corsOptions = {
     origin: 'http://localhost:5173',
-    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+    methods: ['GET', 'POST', 'DELETE', 'PUT','PATCH'],
     allowedHeaders: ['Authorization', 'Content-Type'],
 };
 app.use(cors(corsOptions));
@@ -44,6 +46,8 @@ app.get("", (req, res) => {
 // OTHER ROUTES
 app.use("/api/v1/auth", userRoutes)
 app.use("/api/v1/admin", adminRoutes)
+app.use('/api/v1/product', productRoutes);
+app.use('/api/v1/cart', cartRoutes);
 // const response = await axios.post("http://localhost:8080/api/v1/auth/register", { username, email, password }); frontend req
 
 // PORT
