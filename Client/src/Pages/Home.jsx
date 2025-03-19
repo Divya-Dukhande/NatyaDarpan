@@ -398,9 +398,9 @@ const Home = () => {
       </section>
 
       {/* Slideshow */}
-      <section className="w-10/12 max-w-6xl py-8 bg-gray-100 p-6 rounded-lg shadow-lg mt-10 text-center">
+      <section className="w-10/12 max-w-6xl py-8 mt-10 text-center">
         <h2 className="text-3xl font-bold text-red-700 mb-6">Explore Bharatanatyam</h2>
-        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} className="w-full">
           <div>
             <img src="/assets/images/Traditional_image.jpg" alt="Traditional Dance" className="rounded-lg" />
           </div>
@@ -421,37 +421,42 @@ const Home = () => {
             {
               title: "Comprehensive Learning",
               text: "Get everything about Bharatanatyam in one place—history, significance, movements, and more.",
+              link: "/about",
             },
             {
               title: "Step-by-Step Movements",
               text: "Learn hand, head, neck, eyes, and leg movements with detailed explanations and videos.",
+              link: "/learn",
             },
             {
               title: "One-Stop Platform",
               text: "Instead of searching multiple websites, find all the Bharatanatyam essentials here.",
+              link: "/home",
             },
             {
               title: "Shop Bharatanatyam Essentials",
               text: "Explore and purchase Bharatanatyam accessories, costumes, jewelry, and dance essentials in our store.",
+              link: "/Store",
             },
           ].map((feature, index) => (
-            <motion.div
-              key={index}
-              className="p-4 bg-yellow-200 rounded-lg shadow-md border border-yellow-400 cursor-pointer"
-              whileHover={{
-                scale: 1.00,
-                backgroundColor: "#FFD700",
-                boxShadow: "0px 4px 15px rgba(255, 215, 0, 0.3)",
-              }}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInVariants}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <h3 className="text-xl font-semibold text-red-700">{feature.title}</h3>
-              <p>{feature.text}</p>
-            </motion.div>
+            <a key={index} href={feature.link} className="block">
+              <motion.div
+                className="p-4 bg-yellow-200 rounded-lg shadow-md border border-yellow-400 cursor-pointer"
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "#FFD700",
+                  boxShadow: "0px 4px 15px rgba(255, 215, 0, 0.3)",
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={fadeInVariants}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <h3 className="text-xl font-semibold text-red-700">{feature.title}</h3>
+                <p>{feature.text}</p>
+              </motion.div>
+            </a>
           ))}
         </div>
       </section>

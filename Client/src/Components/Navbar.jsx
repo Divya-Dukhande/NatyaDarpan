@@ -101,7 +101,7 @@
 
 
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast';
 import client from '../lib/axios';
@@ -110,6 +110,7 @@ import { logout } from "../redux/features/auth/authSlice"; // Ensure this action
 const Navbar = ({ username, isAdmin }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation(); // Get current path
   const [isOpen, setIsOpen] = useState(false); // Mobile menu visibility state
 
   const handleLogout = async () => {
@@ -153,18 +154,22 @@ const Navbar = ({ username, isAdmin }) => {
         {/* Navigation Links */}
         <div className={`lg:flex items-center space-x-6 ${isOpen ? 'block' : 'hidden'}`}>
           <ul className="flex flex-col lg:flex-row lg:space-x-4">
-            <li>
-              <Link className="text-black hover:text-emerald-400 transition-colors" to="/">Home</Link>
-            </li>
-            <li>
-              <Link className="text-black hover:text-emerald-400 transition-colors" to="/about">About</Link>
-            </li>
-            <li>
-              <Link className="text-black hover:text-emerald-400 transition-colors" to="/learn">Learn</Link>
-            </li>
-            <li>
-              <Link className="text-black hover:text-emerald-400 transition-colors" to="/store">Store</Link>
-            </li>
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Learn", path: "/learn" },
+              { name: "Store", path: "/store" },
+            ].map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className={`text-black hover:text-emerald-400 transition-colors px-3 py-2 rounded-md ${location.pathname === item.path ? "bg-red-500 text-white font-bold" : ""
+                    }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* Authentication Buttons */}
@@ -173,18 +178,17 @@ const Navbar = ({ username, isAdmin }) => {
               <div className="flex items-center space-x-4">
                 <div className="text-xl font-semibold">
                   <span className="text-lg">Welcome, </span>
-                    <div className="text-xl text-blue-500 animate-pulse">
-                      {username} {/* Display user name with animation */}
-                    </div>
+                  <div className="text-xl text-blue-500 animate-pulse">
+                    {username} {/* Display user name with animation */}
+                  </div>
                 </div>
                 <button
-                onClick={handleLogout}
-                className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
-              >
-                Logout
-              </button>
+                  onClick={handleLogout}
+                  className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                >
+                  Logout
+                </button>
               </div>
-              
             ) : (
               <>
                 <Link to="/login" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
@@ -203,3 +207,4 @@ const Navbar = ({ username, isAdmin }) => {
 };
 
 export default Navbar;
+
