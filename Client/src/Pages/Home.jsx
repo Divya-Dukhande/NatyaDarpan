@@ -398,7 +398,7 @@ const Home = () => {
       </section>
 
       {/* Slideshow */}
-      <section className="w-10/12 max-w-6xl py-8 bg-gray-100 p-6 rounded-lg shadow-lg mt-10 text-center">
+      <section className="w-10/12 max-w-6xl py-8 p-6  mt-10 text-center">
         <h2 className="text-3xl font-bold text-red-700 mb-6">Explore Bharatanatyam</h2>
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
           <div>

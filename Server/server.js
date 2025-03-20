@@ -12,6 +12,7 @@ const userRoutes = require("./routes/userRoutes")
 const adminRoutes = require("./routes/adminRoutes")
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const addressRoutes = require('./routes/addressRoutes');  
 
 
 // DOTENV
@@ -48,6 +49,7 @@ app.use("/api/v1/auth", userRoutes)
 app.use("/api/v1/admin", adminRoutes)
 app.use('/api/v1/product', productRoutes);
 app.use('/api/v1/cart', cartRoutes);
+app.use('/api/v1/address', addressRoutes);
 // const response = await axios.post("http://localhost:8080/api/v1/auth/register", { username, email, password }); frontend req
 
 // PORT

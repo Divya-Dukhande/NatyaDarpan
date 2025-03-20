@@ -27,9 +27,8 @@ const Footer = ({ isAdmin }) => {
             <ul className="text-sm text-gray-600 space-y-2">
               <li><a href="/" className="hover:text-emerald-500">Home</a></li>
               <li><a href="/about" className="hover:text-emerald-500">About</a></li>
-              <li><a href="/contact" className="hover:text-emerald-500">Learn</a></li>
-              <li><a href="/gallery" className="hover:text-emerald-500">Gallery</a></li>
-              <li><a href="/store" className="hover:text-emerald-500">Store</a></li>
+              <li><a href="learn" className="hover:text-emerald-500">Learn</a></li>
+              <li><a href="/Store" className="hover:text-emerald-500">Store</a></li>
             </ul>
           </div>
 
