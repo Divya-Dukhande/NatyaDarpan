@@ -20,7 +20,7 @@
 //         phone: ''
 //     }); // Local state for address form
 
-    
+
 //     const dispatch = useDispatch();
 //     const cart = useSelector((state) => state.cart.cartItems || []);
 //     const user = useSelector(selectUser);
@@ -239,6 +239,7 @@ import { selectUser } from "../redux/features/auth/authSlice";
 import toast from 'react-hot-toast';
 import client from '../lib/axios';
 import { FaShoppingCart, FaMinus, FaPlus, FaTimes } from 'react-icons/fa';
+import { loadStripe } from "@stripe/stripe-js";
 
 const Store = () => {
     const [products, setProducts] = useState([]);
@@ -322,16 +323,31 @@ const Store = () => {
         }
 
         try {
-            const response = await client.post('address/add', { userId: user._id, ...addressForm, cart });
-            if (response.status === 200) {
+            const orderResponse = await client.post('address/add', { userId: user._id, ...addressForm, cart });
+            if (orderResponse.status === 200) {
                 toast.success('Order placed successfully!');
                 dispatch(fetchCart(token)); // Refresh the cart
             }
+
+            const paymentResponse = await client.post('payment/create-checkout-session', {
+                userId: user._id,
+                cart,
+                success_url: window.location.origin + "/success",
+                cancel_url: window.location.origin + "/store"  
+            });
+
+            const stripe = await loadStripe("pk_test_51R808NRZIiJas0mAbPe3Dl9PJIBlZYyleNSXqy133HUn0gcRVnCXarN2jvReZuZ0gm493ruu9TmnAYSeiTfhitIQ00V39DiujY");
+            const { id } = paymentResponse.data;
+
+            const result = await stripe.redirectToCheckout({ sessionId: id });
+
+            if (result.error) {
+                toast.error(result.error.message);
+            }
         } catch (error) {
-            toast.error('Failed to place order.');
+            toast.error('Failed to initiate payment or place order.');
         }
     };
-
     const totalPrice = cart.reduce((acc, item) => acc + item.productId.price * item.quantity, 0);
 
     const handleAddressChange = (e) => {
@@ -490,8 +506,49 @@ const Store = () => {
                     </div>
                 ))}
             </div>
+            {/* Address Form Modal */}
+            {isAddressModalOpen && (
+                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+                        <h2 className="text-2xl font-semibold mb-4">Enter Address</h2>
+                        <form className="space-y-4">
+                            {/* Render address input fields */}
+                            {Object.keys(addressForm).map((key) => (
+                                <div key={key} className="form-group">
+                                    <label className="block text-sm font-medium text-gray-700">{key}</label>
+                                    <input
+                                        type="text"
+                                        name={key}
+                                        value={addressForm[key]}
+                                        onChange={handleAddressChange}
+                                        placeholder={key}
+                                        className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    />
+                                </div>
+                            ))}
+                        </form>
+
+                        {/* Action Buttons */}
+                        <div className="mt-6 flex justify-between">
+                            <button
+                                onClick={handleBuyNow}
+                                className="flex items-center space-x-2 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            >
+                                Confirm
+                            </button>
+                            <button
+                                onClick={() => setIsAddressModalOpen(false)}
+                                className="flex items-center space-x-2 px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
+
 
 export default Store;

@@ -22,6 +22,10 @@ import NotFound from './Pages/not-found';
 import UnauthPage from './Pages/unauth-page/UnauthPage';
 import Store from './Pages/Store';
 
+// Payment Pages
+import Success from './Pages/payment/Success.jsx';
+import Cancel from './Pages/payment/cancel.jsx';
+
 // Redux Store
 import { selectUser, selectUserIsAdmin } from './redux/features/auth/authSlice';
 import { useDispatch, useSelector } from "react-redux";
@@ -92,6 +96,8 @@ const App = () => {
           {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
           <Route path="/unauth-page" element={<UnauthPage />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
         </Routes>
       </main>
       <Footer isAdmin={admin} />
