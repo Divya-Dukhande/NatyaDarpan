@@ -112,7 +112,17 @@ const Navbar = ({ username, isAdmin }) => {
   const navigate = useNavigate();
   const location = useLocation(); // Get current path
   const [isOpen, setIsOpen] = useState(false); // Mobile menu visibility state
+  // useEffect(() => {
+  //   dispatch(fetchQueries());
+  // }, [dispatch]);
 
+  // useEffect(() => {
+  //   // ✅ Count Admin ka Response wale Queries
+  //   const newReplies = queries.filter(query => query.response).length;
+  //   setUnreadCount(newReplies);
+  // }, [queries]);
+  
+  
   const handleLogout = async () => {
     try {
       await client.delete('/auth/logout'); // Adjust endpoint if needed
@@ -158,7 +168,8 @@ const Navbar = ({ username, isAdmin }) => {
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
               { name: "Learn", path: "/learn" },
-              { name: "Store", path: "/store" }
+              { name: "Store", path: "/store" },
+              { name: "Contact Us", path: "/contact" }
             ].map(({ name, path }) => (
               <li key={name}>
                 <Link
@@ -171,6 +182,8 @@ const Navbar = ({ username, isAdmin }) => {
               </li>
             ))}
           </ul>
+
+          
 
           {/* Authentication Buttons */}
           <div className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { FaUser, FaBars, FaSignOutAlt } from "react-icons/fa";
+import { FaUser, FaBars, FaSignOutAlt, FaEnvelope } from "react-icons/fa";
 import UserManagement from "../../Components/Admin/UserManagement";
 import ProductManagement from "../../Components/Admin/ProductManagement";
+import AdminQueries from "./AdminQueries";
 import { selectUser, logout } from "../../redux/features/auth/authSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,7 @@ const AdminDashboard = () => {
     const menuItems = [
         { key: "user", label: "User", icon: <FaUser /> },
         { key: "product", label: "Product", icon: <FaUser /> },
+        {key: "queries", label: "Queries", icon: <FaEnvelope />}
         // Add more menu items as needed
     ];
 
@@ -66,6 +68,7 @@ const AdminDashboard = () => {
                 <div className="mt-4">
                     {activeTab === "user" && <UserManagement />}
                     {activeTab === "product" && <ProductManagement />} 
+                    {activeTab === "queries" && <AdminQueries />} 
                 </div>
             </div>
         </div>

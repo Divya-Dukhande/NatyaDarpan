@@ -31,6 +31,7 @@ import { selectUser, selectUserIsAdmin } from './redux/features/auth/authSlice';
 import { useDispatch, useSelector } from "react-redux";
 import { login, setLoading, setError } from "./redux/features/auth/authSlice.jsx";
 import client from './lib/axios';
+import ContactForm from './Pages/contactUs/contactForm.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -84,6 +85,10 @@ const App = () => {
           <Route
             path="/store"
             element={user.username ? <Store /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/contact"
+            element={user.username ? <ContactForm /> : <Navigate to="/contact" />}
           />
           <Route
             path="/admindashboard"

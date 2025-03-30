@@ -14,7 +14,7 @@ const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const addressRoutes = require('./routes/addressRoutes');  
 const paymentRoutes = require('./routes/paymentRoutes');
-
+const queryRoutes = require('./routes/queryRoutes')
 
 // DOTENV
 dotenv.config();
@@ -52,6 +52,7 @@ app.use('/api/v1/product', productRoutes);
 app.use('/api/v1/cart', cartRoutes);
 app.use('/api/v1/address', addressRoutes);
 app.use('/api/v1/payment', paymentRoutes);
+app.use("/api/v1/queries", queryRoutes);
 // const response = await axios.post("http://localhost:8080/api/v1/auth/register", { username, email, password }); frontend req
 
 // PORT
