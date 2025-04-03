@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQueries, respondToQuery } from "../../redux/E-commerce/querySlice";
 import { toast } from "react-hot-toast";
@@ -9,7 +9,7 @@ const AdminQueries = () => {
     const [responseText, setResponseText] = useState({});
 
     useEffect(() => {
-        dispatch(fetchQueries());  // ✅ Fetch all queries on component mount
+        dispatch(fetchQueries());  //  Fetch all queries on component mount
     }, [dispatch]);
 
     const handleResponse = (id) => {
@@ -53,3 +53,6 @@ const AdminQueries = () => {
 };
 
 export default AdminQueries;
+
+
+
