@@ -402,10 +402,10 @@ const Home = () => {
         <h2 className="text-3xl font-bold text-red-700 mb-6">Explore Bharatanatyam</h2>
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
           <div>
-            <img src="/assets/images/Traditional_image.jpg" alt="Traditional Dance" className="rounded-lg" />
+            <img src="/assets/images/Bharatanatym_image-transformed.jpeg" alt="Traditional Dance" className="rounded-lg" />
           </div>
           <div>
-            <img src="/assets/images/Cultural_Bharatnatym.jpg" alt="Cultural Festival" className="rounded-lg" />
+            <img src="/assets/images/Cultural_Bharatnatym (1).jpg" alt="Cultural Festival" className="rounded-lg" />
           </div>
           <div>
             <img src="/assets/images/bharatnatyam_stage.png" alt="Stage Performance" className="rounded-lg" />

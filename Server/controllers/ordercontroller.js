@@ -1,18 +1,32 @@
-import Order from '../models/Order.js';
+const Order = require("../models/orderModel");
+const Address = require("../models/Address");
 
-// ✅ Get user-specific orders
-export const getUserOrders = async (req, res) => {
+// Create Order after payment success
+exports.createOrder = async (req, res) => {
     try {
-        const { userId } = req.params;
-        const orders = await Order.find({ user: userId }).populate('cart.productId');
+        const { cart } = req.body;
 
-        if (!orders.length) {
-            return res.status(404).json({ message: 'No orders found.' });
+        // Get selected address for user
+        const addressDoc = await Address.findOne({ userId: req.user._id });
+        const selectedAddress = addressDoc?.selectedAddress;
+
+        if (!selectedAddress) {
+            return res.status(400).json({ message: "No address selected" });
         }
 
-        res.json(orders);
+        const orderItems = cart.map(item => ({
+            product: item.productId._id,
+            quantity: item.quantity,
+        }));
+
+        const newOrder = await Order.create({
+            user: req.user._id,
+            orderItems,
+            shippingAddress: selectedAddress,
+        });
+
+        res.status(201).json(newOrder);
     } catch (error) {
-        console.error("Error fetching orders:", error);
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: "Error creating order", error });
     }
 };
