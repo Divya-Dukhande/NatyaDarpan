@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchQueries, respondToQuery } from "../../redux/E-commerce/querySlice";
 import { toast } from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const AdminQueries = () => {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const AdminQueries = () => {
     const [responseText, setResponseText] = useState({});
 
     useEffect(() => {
-        dispatch(fetchQueries());  //  Fetch all queries on component mount
+        dispatch(fetchQueries());
     }, [dispatch]);
 
     const handleResponse = (id) => {
@@ -26,11 +27,16 @@ const AdminQueries = () => {
     return (
         <div className="p-4">
             <h2 className="text-xl font-semibold mb-4">User Queries</h2>
-            {loading && <p>Loading queries...</p>}
-            {queries.length === 0 && !loading && <p>No new queries.</p>}
 
-            {queries.map((query) => (
+            {loading && <p>Loading queries...</p>}
+
+            {!loading && (!Array.isArray(queries) || queries.length === 0) && (
+                <p className="text-gray-600 italic">No queries available yet.</p>
+            )}
+
+            {!loading && Array.isArray(queries) && queries.map((query) => (
                 <div key={query._id} className="border p-3 mb-3 rounded">
+                    <p><strong>Username:</strong> {query.username}</p>
                     <p><strong>User Query:</strong> {query.message}</p>
                     <p><strong>Response:</strong> {query.response || "No response yet"}</p>
                     <textarea
@@ -38,7 +44,9 @@ const AdminQueries = () => {
                         rows="2"
                         placeholder="Enter response..."
                         value={responseText[query._id] || ""}
-                        onChange={(e) => setResponseText({ ...responseText, [query._id]: e.target.value })}
+                        onChange={(e) =>
+                            setResponseText({ ...responseText, [query._id]: e.target.value })
+                        }
                     ></textarea>
                     <button
                         onClick={() => handleResponse(query._id)}
@@ -53,6 +61,3 @@ const AdminQueries = () => {
 };
 
 export default AdminQueries;
-
-
-

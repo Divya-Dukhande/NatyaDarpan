@@ -400,15 +400,15 @@ const Home = () => {
       {/* Slideshow */}
       <section className="w-10/12 max-w-6xl py-8 p-6  mt-10 text-center">
         <h2 className="text-3xl font-bold text-red-700 mb-6">Explore Bharatanatyam</h2>
-        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} >
           <div>
-            <img src="/assets/images/Bharatanatym_image-transformed.jpeg" alt="Traditional Dance" className="rounded-lg" />
+            <img src="/assets/images/nataraja3.jpg" alt="Traditional Dance" className="rounded-lg w-full h-[700px] object-cover" />
           </div>
           <div>
-            <img src="/assets/images/Cultural_Bharatnatym (1).jpg" alt="Cultural Festival" className="rounded-lg" />
+            <img src="/assets/images/Cultural_Bharatanatym.jpg" alt="Cultural Festival" className="rounded-lg w-full h-[700px] object-cover" />
           </div>
           <div>
-            <img src="/assets/images/bharatnatyam_stage.png" alt="Stage Performance" className="rounded-lg" />
+            <img src="/assets/images/bharatnatyam_stage.png" alt="Stage Performance" className="rounded-lg w-full h-[700px] object-cover" />
           </div>
         </Carousel>
       </section>

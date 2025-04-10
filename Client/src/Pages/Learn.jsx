@@ -5,7 +5,7 @@ const Learn = () => {
   const [openVideo, setOpenVideo] = useState(null);
   const categories = [
     { id: "1", name: "One Hand Movements", image: "/assets/images/Pataka.png" },
-    { id: "2", name: "Two Hand Movements", image: "/assets/images/Anjalihastah.png" },
+    { id: "2", name: "Two Hand Movements", image: "/assets/images/anjalihastah.png" },
     { id: "3", name: "Leg Movements", image: "/assets/images/Leg.png" },
     { id: "4", name: "Neck Movements", image: "/assets/images/Neck.png" },
     { id: "5", name: "Head Movements", image: "/assets/images/Sama.png" },

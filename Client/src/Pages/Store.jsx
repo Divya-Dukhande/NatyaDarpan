@@ -202,7 +202,7 @@
 //                                             <img src={item.productId.image} alt={item.productId.name} className="w-12 h-12 object-cover rounded" />
 //                                             <div>
 //                                                 <p>{item.productId.name}</p>
-//                                                 <p className="text-sm text-gray-600">₹{item.productId.price} x {item.quantity}</p>
+//                                                 <p className="text-sm text-gray-600 ">₹{item.productId.price} x {item.quantity}</p>
 //                                             </div>
 //                                         </div>
 //                                         <div className="flex gap-2">
@@ -534,7 +534,7 @@ const Store = () => {
                                 {cart.map((item) => (
                                     <li key={item._id} className="flex justify-between items-center my-2 border-b pb-2">
                                         <div className="flex items-center gap-2">
-                                            <img src={item.productId.image} alt={item.productId.name} className="w-12 h-12 object-cover rounded" />
+                                            <img src={item.productId.image} alt={item.productId.name} className="h-full w-auto object-contain" />
                                             <div>
                                                 <p>{item.productId.name}</p>
                                                 <p className="text-sm text-gray-600">₹{item.productId.price} x {item.quantity}</p>
@@ -598,7 +598,7 @@ const Store = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {filteredProducts.map((product) => (
                     <div key={product._id} className="border rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-                        <img src={product.image} alt={product.name} className="w-full h-56 object-cover" />
+                        <img src={product.image} alt={product.name} className="w-full h-56 object-cover rounded lg:h-72" />
                         <div className="p-4">
                             <h3 className="text-xl font-semibold">{product.name}</h3>
                             <p className="text-lg text-gray-600">₹{product.price}</p>

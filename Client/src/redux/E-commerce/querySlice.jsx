@@ -1,83 +1,61 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import client from "../../lib/axios"; // ✅ Ensure client.js is properly set up
+import client from "../../lib/axios";
 
-// ✅ Fetch Queries (Admin Side)
-export const fetchQueries = createAsyncThunk("queries/fetchQueries", async (_, { rejectWithValue }) => {
-    try {
-        const response = await client.get("/queries");  // ✅ Removed duplicate `/api/v1/`
-        return response.data;
-    } catch (error) {
-        console.error("Error fetching queries:", error.response?.data || error.message);
-        return rejectWithValue(error.response?.data || "Failed to fetch queries");
-    }
+// ✅ Async thunk functions (define only, don’t export here)
+const fetchQueries = createAsyncThunk("queries/fetch", async () => {
+    const response = await client.get("/queries/get"); // remains same
+    return response.data;
 });
 
-// ✅ Submit Query (User Side)
-export const submitQuery = createAsyncThunk("queries/submitQuery", async (queryData, { rejectWithValue }) => {
-    try {
-        console.log("Submitting query:", queryData); // Debugging
-        const response = await client.post("/queries", queryData); // ✅ Removed duplicate `/api/v1/`
-        console.log("Query submitted successfully:", response.data);
-        return response.data;
-    } catch (error) {
-        console.error("Query submission failed:", error.response?.data || error.message);
-        return rejectWithValue(error.response?.data || "Failed to submit query");
-    }
+const respondToQuery = createAsyncThunk("queries/respond", async ({ id, response }) => {
+    const res = await client.put(`/queries/${id}/respond`, { response }); // ✅ updated
+    return res.data;
 });
 
-// ✅ Respond to a Query (Admin Side)
-export const respondToQuery = createAsyncThunk("queries/respond", async ({ id, response }, { rejectWithValue }) => {
-    try {
-        const { data } = await client.put(`/queries/${id}`, { response }); // ✅ Removed duplicate `/api/v1/`
-        return data;
-    } catch (error) {
-        console.error("Error responding to query:", error.response?.data || error.message);
-        return rejectWithValue(error.response?.data || "Failed to respond to query");
-    }
+const submitQuery = createAsyncThunk("queries/submit", async (formData) => {
+    const res = await client.post("/queries/add", formData); // ✅ updated
+   
+    return res.data;
 });
 
-// ✅ Redux Slice
 export const querySlice = createSlice({
     name: "queries",
-    initialState: { queries: [], loading: false, error: null },
+    initialState: {
+        queries: [],
+        loading: false,
+    },
     reducers: {},
     extraReducers: (builder) => {
         builder
-            // ✅ Fetch Queries
-            .addCase(fetchQueries.pending, (state) => { state.loading = true; })
+            .addCase(fetchQueries.pending, (state) => {
+                state.loading = true;
+            })
             .addCase(fetchQueries.fulfilled, (state, action) => {
                 state.loading = false;
                 state.queries = action.payload;
             })
-            .addCase(fetchQueries.rejected, (state, action) => {
+            .addCase(fetchQueries.rejected, (state) => {
                 state.loading = false;
-                state.error = action.payload;
-            })
-
-            // ✅ Submit Query
-            .addCase(submitQuery.fulfilled, (state, action) => {
-                console.log("Query added to state:", action.payload); // Debugging
-                state.queries.push(action.payload);
-            })
-            .addCase(submitQuery.rejected, (state, action) => {
-                state.error = action.payload;
-            })
-
-            // ✅ Respond to a Query
-            .addCase(respondToQuery.pending, (state) => {
-                state.loading = true;
+                state.queries = [];
             })
             .addCase(respondToQuery.fulfilled, (state, action) => {
-                state.loading = false;
-                state.queries = state.queries.map(query =>
-                    query._id === action.payload._id ? action.payload : query
-                );
+                const index = state.queries.findIndex(q => q._id === action.payload._id);
+                if (index !== -1) {
+                    state.queries[index] = action.payload;
+                }
             })
-            .addCase(respondToQuery.rejected, (state, action) => {
+            .addCase(submitQuery.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(submitQuery.fulfilled, (state, action) => {
                 state.loading = false;
-                state.error = action.payload;
+                state.queries.push(action.payload); // ✅ add new query to list
+            })
+            .addCase(submitQuery.rejected, (state) => {
+                state.loading = false;
             });
-    }
+    },
 });
 
 export default querySlice.reducer;
+export { fetchQueries, respondToQuery, submitQuery }; // ✅ Clean, single export line

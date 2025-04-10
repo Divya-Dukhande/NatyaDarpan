@@ -15,14 +15,14 @@ const QueryList = () => {
 
     return (
         <div className="max-w-3xl mx-auto mt-10">
-            <h2 className="text-2xl font-bold mb-4">Your Queries</h2>
+            <h2 className="text-2xl font-bold mb-4">User Queries</h2>
             {queries.length === 0 ? (
                 <p>No queries submitted yet.</p>
             ) : (
                 queries.map((query) => (
                     <div key={query._id} className="border p-4 rounded mb-4 bg-gray-100">
-                        <p><strong>Your Query:</strong> {query.message}</p>
-
+                        <p><strong>From:</strong> {query.username}</p>
+                        <p><strong>Query:</strong> {query.message}</p>
                         {query.response ? (
                             <p className="text-green-600 mt-2">
                                 <strong>Admin's Reply:</strong> {query.response}

@@ -1,62 +1,41 @@
 const express = require("express");
-const QueryModel = require("../models/QueryModel");
-
 const router = express.Router();
+const Query = require("../models/Query");
 
-// ✅ Get All Queries (Admin Side)
-router.get("/", async (req, res) => {
+// POST: User sends a query
+router.post("/add", async (req, res) => {
     try {
-        const queries = await QueryModel.find();
-        res.status(200).json(queries);
-    } catch (error) {
-        console.error("Error fetching queries:", error);
-        res.status(500).json({ message: "Internal Server Error", error: error.message });
-    }
-});
-
-// ✅ Submit a Query (User Side)
-router.post("/", async (req, res) => {
-    try {
-        console.log("Received request body:", req.body);
-        const { message } = req.body;
-
-        if (!message) {
-            return res.status(400).json({ message: "Message is required" });
-        }
-
-        const newQuery = new QueryModel({ message });
+        const { username, message } = req.body;
+        const newQuery = new Query({ username, message });
         await newQuery.save();
-
-        console.log("Query saved:", newQuery);
-        res.status(201).json(newQuery); // ✅ Ensure correct format
+        res.status(201).json({ message: "Query sent successfully" });
     } catch (error) {
-        console.error("Error submitting query:", error);
-        res.status(500).json({ message: "Error submitting query", error: error.message });
+        res.status(500).json({ message: "Failed to send query" });
     }
 });
 
-// ✅ Respond to a Query (Admin Side)
-router.put("/:id", async (req, res) => {
+// GET: Admin fetches all queries
+router.get("/get", async (req, res) => {
+    try {
+        const queries = await Query.find().sort({ createdAt: -1 });
+        res.json(queries);
+    } catch (error) {
+        res.status(500).json({ message: "Failed to fetch queries" });
+    }
+});
+
+// PUT: Admin responds to a query
+router.put("/:id/respond", async (req, res) => {
     try {
         const { response } = req.body;
-        if (!response) {
-            return res.status(400).json({ message: "Response is required" });
-        }
-
-        const updatedQuery = await QueryModel.findByIdAndUpdate(
+        const query = await Query.findByIdAndUpdate(
             req.params.id,
             { response },
             { new: true }
         );
-
-        if (!updatedQuery) {
-            return res.status(404).json({ message: "Query not found" });
-        }
-
-        res.status(200).json(updatedQuery);
+        res.json(query);
     } catch (error) {
-        console.error("Error responding to query:", error);
-        res.status(500).json({ message: "Error responding to query", error: error.message });
+        res.status(500).json({ message: "Failed to respond to query" });
     }
 });
 
