@@ -16,6 +16,25 @@ const cookieOptions = {
 // REGISTER FUNCTION
 const registerUser = async (req, res) => {
     const { username, email, password } = req.body;
+
+    //Validations
+    if (!username || username.trim() === '') {
+        return res.status(400).json({ message: 'Please fill in all details' });
+    }
+
+    if (!email || email.trim() === '') {
+        return res.status(400).json({ message: 'Email is required' });
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: 'Invalid email format' });
+    }
+
+    if (!password || password.length < 6) {
+        return res.status(400).json({ message: 'Enter 6 digits long password' });
+    }
+    
     try {
         // Check if the user already exists
         const existingUser = await User.findOne({ $or: [{ username }, { email }] });
