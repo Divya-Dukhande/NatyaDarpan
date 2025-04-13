@@ -10,6 +10,14 @@ exports.addAddress = async (req, res) => {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
+        //Validate pincode
+        const pinRegex = /^[0-9]{6}$/;
+        if (!pinRegex.test(zip)) {
+            return res.status(400).json({ error: 'Invalid pincode' });
+        }
+
+        //Validate phone number
+
         // Find the user's address data
         let userAddress = await Address.findOne({ userId });
 
