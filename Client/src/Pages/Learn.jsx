@@ -336,31 +336,31 @@ const Learn = () => {
       items: [
         {
           name: "Udghattita",
-          image: "/assets/images/Udghattita.png",
+          image: "/assets/images/Leg Movements/Udghattita.png",
           meaning: "The heel rises",
           videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=c5_S0EF3XaEVOhst&amp;start=26"
         },
         {
           name: "Sama",
-          image: "/assets/images/Sama.png",
+          image: "/assets/images/Leg Movements/Sama.png",
           meaning: "Feet on the ground",
           videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=qT4koRn9FyWBALWa&amp;start=29"
         },
         {
           name: "Agratalasanchara",
-          image: "/assets/images/Agratalasanchara.png",
+          image: "/assets/images/Leg Movements/Agratalasanchara.png",
           meaning: "toe touches the ground",
           videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=s9FifZVo9IOOeXHw&amp;start=32"
         },
         {
           name: "Anchita",
-          image: "/assets/images/Anchita.png",
+          image: "/assets/images/Leg Movements/Anchita.png",
           meaning: "Legs on heel",
           videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=nr1Y_jOzLRwpAG0D&amp;start=35"
         },
         {
           name: "Kunchita",
-          image: "/assets/images/Kunchita.png",
+          image: "/assets/images/Leg Movements/Kunchita.png",
           meaning: "Fingertips touch the ground",
           videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=yYkNvB4XsN41tD5p&amp;start=38"
         },
