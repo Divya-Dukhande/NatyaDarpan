@@ -412,8 +412,6 @@ const Learn = () => {
           meaning: "Turned upwards",
           videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=cpRD58Eo6BXBFMZq&amp;start=185"
         },
-        },
-
         {
           name: "Parivahittasirah",
           image: "/assets/images/Head Movements/Parivahita.png",
@@ -421,6 +419,7 @@ const Learn = () => {
         },
       ],
     },
+    
     "6": {
       name: "Eyes Movements",
       items: [
