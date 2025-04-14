@@ -356,6 +356,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const fadeInVariants = {
@@ -421,23 +422,28 @@ const Home = () => {
             {
               title: "Comprehensive Learning",
               text: "Get everything about Bharatanatyam in one place—history, significance, movements, and more.",
+              link: "/about",
             },
             {
               title: "Step-by-Step Movements",
               text: "Learn hand, head, neck, eyes, and leg movements with detailed explanations and videos.",
+              link: "/learn",
             },
             {
               title: "One-Stop Platform",
               text: "Instead of searching multiple websites, find all the Bharatanatyam essentials here.",
+              link: "/",
             },
             {
               title: "Shop Bharatanatyam Essentials",
               text: "Explore and purchase Bharatanatyam accessories, costumes, jewelry, and dance essentials in our store.",
+              link: "/store",
             },
           ].map((feature, index) => (
+            <Link to={feature.link} key={index}>
             <motion.div
               key={index}
-              className="p-4 bg-yellow-200 rounded-lg shadow-md border border-yellow-400 cursor-pointer"
+                className="p-4 bg-yellow-200 rounded-lg shadow-md border border-yellow-400 cursor-pointer min-h-[230px] flex flex-col justify-center"
               whileHover={{
                 scale: 1.00,
                 backgroundColor: "#FFD700",
@@ -452,7 +458,8 @@ const Home = () => {
               <h3 className="text-xl font-semibold text-red-700">{feature.title}</h3>
               <p>{feature.text}</p>
             </motion.div>
-          ))}
+            </Link>
+          ))}           
         </div>
       </section>
     </main>
