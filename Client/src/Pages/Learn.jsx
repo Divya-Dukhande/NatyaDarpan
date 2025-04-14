@@ -26,181 +26,163 @@ const Learn = () => {
           name: "Tripatakahastah",
           image: "/assets/images/One Hand Movements/Tripataka.png",
           meaning: "Three Parts of Flag",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/e5YnQNjscFQ?si=I4hPgBYzz1s9wEvo"
         },
         {
           name: "Ardhapatakahastah",
           image: "/assets/images/One Hand Movements/Ardhapataka.png",
           meaning: "Half-Flag",
-          videoUrl: "https://www.youtube.com/embed/c4nGxGoO8-I?si=1wM6crINoFyc2pRe"
+          videoUrl: "https://www.youtube.com/embed/YOUZZZkcpIU?si=60QHK_u2M2Ksr48D"
         },
         {
           name: "Kartarimukhahastah",
           image: "/assets/images/One Hand Movements/Kartarimukha.png",
           meaning: "The face of a scissor",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/JZlhgfcCf3M?si=wvDlsL9WjwDNg266"
         },
         {
           name: "Mayurahastah",
           image: "/assets/images/One Hand Movements/Mayura.png",
           meaning: "Peacock",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/nrRgeP4-Jjg?si=rnfwW54iFb7lZX5C"
         },
         {
           name: "Ardhacandrahastah",
           image: "/assets/images/One Hand Movements/Ardhacandra.png",
           meaning: "Half Moon",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/l0Of4lRX334?si=6hGHwAxJtkBGgIpf"
         },
         {
           name: "Aralahastah",
           image: "/assets/images/One Hand Movements/Arala.png",
           meaning: "Slightly bent or curved fingers",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/Ijblv-HLf_U?si=x19MrCPK7QCg-Lzn"
         },
         {
           name: "Sukatundahastah",
           image: "/assets/images/One Hand Movements/Sukatunda.png",
           meaning: "Parrot's beak",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/Ijblv-HLf_U?si=eOYzl01_e8jDMSBl&amp;start=24"
         },
         {
           name: "Mushtihastah",
           image: "/assets/images/One Hand Movements/Musti.png",
           meaning: "Fist",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/rrYZlwkZFwE?si=uaeDqKE-DKqKGSIL"
         },
         {
           name: "Sikharahastah",
           image: "/assets/images/One Hand Movements/Sikhara.png",
           meaning: "Peak",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/SRNzt3afnKE?si=989RnYJ_QFPuymjV"
         },
         {
           name: "Kapitthahastah",
           image: "/assets/images/One Hand Movements/Kapittaha.png",
           meaning: "Wood Apple",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/jv6MFqIYvBQ?si=1U_wTQEKT6gZk1IY"
+        },
+        {
+          name: "katakaukhahastah",
+          image: "/assets/images/One Hand Movements/Kapittaha.png",
+          meaning: "Half-closed fist",
+          videoUrl: "https://www.youtube.com/embed/tU4nk9eusWc?si=t3WnX6GWVTZeEXMy"
         },
         {
           name: "Sucihastah",
           image: "/assets/images/One Hand Movements/Suci.png",
           meaning: "Needle pointed",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/Gmm3zQQhzpc?si=D6RbIirnydTB1ksO"
         },
         {
           name: "Candrakalahastah",
           image: "/assets/images/One Hand Movements/Candrakala.png",
           meaning: "Cresent Moon",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/NeURbFUvh74?si=SZgO4fsgd_JYqHl7"
         },
         {
           name: "Padmakosahastah",
           image: "/assets/images/One Hand Movements/Padmakosa.png",
           meaning: "Lotus Bud",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/uKtL1d3BeGI?si=6yJ5UVBulkfJPD0a"
         },
         {
           name: "Sarpasirsahastah",
           image: "/assets/images/One Hand Movements/Sarpasirsaha.png",
           meaning: "Snake Head",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/i6zeVGfCUYk?si=0XNO1rZ7bhfZ_e3E"
         },
         {
           name: "Mrgasirsahastah",
           image: "/assets/images/One Hand Movements/Mrgasirsaha.png",
           meaning: "Deer Head",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/iHQuY5zMxLc?si=wApJHRPs3dlJdabh"
         },
         {
           name: "Simhamukhahastah",
           image: "/assets/images/One Hand Movements/Simhamukha.png",
           meaning: "Lion-face",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/eyxhKg8eqdw?si=svZ4QYImUnJ7fQXi"
         },
         {
           name: "Kangulahastah",
           image: "/assets/images/One Hand Movements/Kangula.png",
           meaning: "Little finger is curved or bent like a bud.",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/yjIqKiooANo?si=869VrCk2ZZywldOH"
         },
         {
           name: "Alapadmahastah",
           image: "/assets/images/One Hand Movements/Alapadma.png",
           meaning: "Moving Lotus",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/yjIqKiooANo?si=869VrCk2ZZywldOH"
         },
         {
           name: "Caturahastah",
           image: "/assets/images/One Hand Movements/Catura.png",
           meaning: "Dexterous",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/oguPzXFZDvE?si=ynaOp6B-8hKivy-j"
         },
         {
           name: "Bhramarahastah",
           image: "/assets/images/One Hand Movements/Bhramara.png",
           meaning: "Bee-shaped",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/oguPzXFZDvE?si=ynaOp6B-8hKivy-j"
         },
         {
           name: "Hamsasyahastah",
           image: "/assets/images/One Hand Movements/Hamasasya.png",
           meaning: "Swan face",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/yuCtpU-5sGk?si=u9iOaShzBLxCYTK0"
         },
         {
           name: "Hamsapakshahastah",
           image: "/assets/images/One Hand Movements/Hamsapaksha.png",
           meaning: "Swan - wing",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/DiyqNo2152Q?si=n54AJpwHLGTpHltf"
         },
         {
           name: "Sandamsahastah",
           image: "/assets/images/One Hand Movements/Sandamsa.png",
           meaning: "Pincers",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/3uOTC6tgYM4?si=UkbTk9-MPpwHgNKL"
         },
         {
           name: "Mukulashastah",
           image: "/assets/images/One Hand Movements/Mukula.png",
           meaning: "Pincers",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/jSU83TH3qsM?si=wWZphRykEQt2FPz4"
         },
         {
           name: "Tamracudahastah",
           image: "/assets/images/One Hand Movements/Tamracuda.png",
           meaning: "Cock",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/jSU83TH3qsM?si=Wp0_HbCMiiCfSu9w&amp;start=28"
         },
         {
           name: "Trisulahastah",
           image: "/assets/images/One Hand Movements/Trisula.png",
           meaning: "Trident",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
-        },
-        {
-          name: "Vyaghrahastah",
-          image: "/assets/images/One Hand Movements/Vyagra.png",
-          meaning: "Tige",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
-        },
-        {
-          name: "Ardhasucihastah",
-          image: "/assets/images/One Hand Movements/Ardhasuci.png",
-          meaning: "Half Indicatory",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
-        },
-        {
-          name: "katakahastah",
-          image: "/assets/images/One Hand Movements/Kataka.png",
-          meaning: "Bracelet",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
-        },
-        {
-          name: "Vallihastah",
-          image: "/assets/images/One Hand Movements/Sandamsa.png",
-          meaning: "Creeper/Hut",
-          videoUrl: "https://www.youtube.com/embed/74Xyqa4iwK0"
+          videoUrl: "https://www.youtube.com/embed/jSU83TH3qsM?si=om0mVnwwlFSp19le&amp;start=58"
         },
       ],
     },
@@ -211,117 +193,140 @@ const Learn = () => {
         {
           name: "Anjali",
           image: "/assets/images/Anjalihastah.png",
-          meaning: "Folded Hands"
+          meaning: "Folded Hands",
+          videoUrl: "https://www.youtube.com/embed/Dn1HoQg2TFM?si=TfQ72I_CbdHEFQ60&amp;start=6"
         },
         {
           name: "Kapotahastah",
           image: "/assets/images/Two Hand Movements/Kapota.png",
-          meaning: "Dove"
+          meaning: "Dove",
+          videoUrl: "https://www.youtube.com/embed/Dn1HoQg2TFM?si=J4DVuRi2TDHKLRo6&amp;start=32"
         },
         {
           name: "Karkatahastah",
           image: "/assets/images/Two Hand Movements/Karkata.png",
-          meaning: "Crab"
+          meaning: "Crab",
+          videoUrl: "https://www.youtube.com/embed/Dn1HoQg2TFM?si=UHIdjeSMhbryyo5c&amp;start=53"
         },
         {
           name: "Svastikahastah",
           image: "/assets/images/Two Hand Movements/Svastika.png",
-          meaning: "Svastika"
+          meaning: "Svastika",
+          videoUrl: "https://www.youtube.com/embed/niNeVLf0fKU?si=B3KwTYgZHMPWM-YD"
         },
         {
           name: "Dolahastah",
           image: "/assets/images/Two Hand Movements/Dola.png",
-          meaning: "SWing"
+          meaning: "SWing",
+          videoUrl: "https://www.youtube.com/embed/niNeVLf0fKU?si=bBHqe2Fn2Pt6liFn&amp;start=16"
         },
         {
           name: "Pushpaputahastah",
           image: "/assets/images/Two Hand Movements/Puspaputa.png",
-          meaning: "Flower Basket"
+          meaning: "Flower Basket",
+          videoUrl: "https://www.youtube.com/embed/niNeVLf0fKU?si=EzbCWHVwUTD-qMBz&amp;start=32"
         },
         {
           name: "Utsangahastah",
           image: "/assets/images/Two Hand Movements/Utsanga.png",
-          meaning: "The lap"
+          meaning: "The lap",
+          videoUrl: "https://www.youtube.com/embed/dgs-88Trsbs?si=mReoV21VMQ41uLFh"
         },
         {
           name: "Sivalingahastah",
           image: "/assets/images/Two Hand Movements/Sivalinga.png",
-          meaning: "Sivalinga"
+          meaning: "Sivalinga",
+          videoUrl: "https://www.youtube.com/embed/dgs-88Trsbs?si=sNXcP0fpju83Lij3&amp;start=32"
         },
         {
           name: "Katakavardhanahastah",
           image: "/assets/images/Two Hand Movements/Katakavardhana.png",
-          meaning: "Link of increase"
+          meaning: "Link of increase",
+          videoUrl: "https://www.youtube.com/embed/dgs-88Trsbs?si=eAnH3cM51317q743&amp;start=51"
         },
         {
           name: "Kartarisvastikahastah",
           image: "/assets/images/Two Hand Movements/Kartarisvastika.png",
-          meaning: "Crossed arrows, branches, peaks, trees, etc"
+          meaning: "Crossed arrows, branches, peaks, trees, etc",
+          videoUrl: "https://www.youtube.com/embed/yrWPztdREco?si=kt03aIs759qBXp0D"
         },
         {
           name: "Sakatahastah",
           image: "/assets/images/Two Hand Movements/Sakata.png",
-          meaning: "Cart"
+          meaning: "Cart",
+          videoUrl: "https://www.youtube.com/embed/yrWPztdREco?si=2YnPjNpPX-EkXWUe&amp;start=40"
         },
         {
           name: "Sankhahastah",
           image: "/assets/images/Two Hand Movements/Sankha.png",
-          meaning:"Conch"
+          meaning:"Conch",
+          videoUrl: "https://www.youtube.com/embed/dgs-88Trsbs?si=eAnH3cM51317q743&amp;start=51"
         },
         {
           name: "Cakrahastah",
           image: "/assets/images/Two Hand Movements/Cakra.png",
-          meaning:"Disc"
+          meaning:"Disc",
+          videoUrl: "https://www.youtube.com/embed/2FB3X4FV5kc?si=YC8lLidi-aI7ISE5"
         },
         {
           name: "Samputahastah",
           image: "/assets/images/Two Hand Movements/Samputa.png",
-          meaning:"Box"
+          meaning:"Box",
+          videoUrl: "https://www.youtube.com/embed/2FB3X4FV5kc?si=awj46SyYEH2BCnpB&amp;start=18"
         },
         {
           name: "Pasahastah",
           image: "/assets/images/Two Hand Movements/Pasa.png",
-          meaning:"Noose"
+          meaning:"Noose",
+          videoUrl: "https://www.youtube.com/embed/2FB3X4FV5kc?si=Q3fD6dRzSvrU01fi&amp;start=38"
         },
         {
           name: "Kilakahastah",
           image: "/assets/images/Two Hand Movements/Kilaka.png",
-          meaning:"Key"
+          meaning:"Key",
+          videoUrl: "https://www.youtube.com/embed/0t7JPET3MdI?si=QFsnwS_zMMjSuxt2"
         },
         {
           name: "Matsyahastah",
           image: "/assets/images/Two Hand Movements/Matsya.png",
-          meaning:"Fish"
+          meaning:"Fish",
+          videoUrl: "https://www.youtube.com/embed/0t7JPET3MdI?si=k0tCdntKYk6eJOpd&amp;start=20"
         },
         {
           name: "Kurmahastah",
           image: "/assets/images/Two Hand Movements/Kurma.png",
-          meaning:"Tortoise"
+          meaning:"Tortoise",
+          videoUrl: "https://www.youtube.com/embed/0t7JPET3MdI?si=GKEjfWIpZIK47iXl&amp;start=39"
         },
         {
           name: "Varahahastah",
           image: "/assets/images/Two Hand Movements/Varaha.png",
-          meaning:"Boar"
+          meaning:"Boar",
+          videoUrl: "https://www.youtube.com/embed/oeU6gn-wfgE?si=npzMKcS1UT5itfzv"
         },
         {
           name: "Garudahastah",
           image: "/assets/images/Two Hand Movements/Garuda.png",
-          meaning:"Hawk"
+          meaning:"Hawk",
+          videoUrl: "https://www.youtube.com/embed/oeU6gn-wfgE?si=kgoJu4aMuOdho8oT&amp;start=19"
         },
         {
           name: "Nagabandhahastah",
           image: "/assets/images/Two Hand Movements/Nagabandha.png",
-          meaning:"Twining of snake"
+          meaning:"Twining of snake",
+          videoUrl: "https://www.youtube.com/embed/oeU6gn-wfgE?si=n4bVI8r6KjlrekrF&amp;start=37"
         },
         {
           name: "Khatvahastah",
           image: "/assets/images/Two Hand Movements/Khatva.png",
-          meaning:"Cot"
+          meaning:"Cot",
+          videoUrl: "https://www.youtube.com/embed/0cTGElMSFFY?si=Htty8UbccbFm6Fsl"
         },
         {
           name: "Bherundahastah",
           image: "/assets/images/Two Hand Movements/Bherunda.png",
-          meaning:"Bird"
+          meaning:"Bird",
+          videoUrl: "https://www.youtube.com/embed/0cTGElMSFFY?si=gPCpPtNbDKH64S0s&amp;start=201"
         },
       ],
     },
@@ -332,68 +337,83 @@ const Learn = () => {
         {
           name: "Sundari Griva",
           image: "/assets/images/Neck Movements/Sundari.png",
-          meaning: "Moves from side to side"
+          meaning: "Moves from side to side",
+          videoUrl: "https://www.youtube.com/embed/KUPFrHs57Wo?si=GeS1bb34IAOzd-O0&amp;start=15"
         },
         {
           name: "Tirashcina Griva",
           image: "/assets/images/Neck Movements/Tirascina.png",
-          meaning: "Moves in a V-shape"
+          meaning: "Moves in a V-shape",
+          videoUrl: "https://www.youtube.com/embed/KUPFrHs57Wo?si=iUfj1C2p_OYq7-IL&amp;start=27"
         },
         {
           name: "Parivartita Griva",
           image: "/assets/images/Neck Movements/Parivartita.png",
-          meaning: "Moves in a semicircle or moon-like shape"
+          meaning: "Moves in a semicircle or moon-like shape",
+          videoUrl: "https://www.youtube.com/embed/KUPFrHs57Wo?si=eN85XO-fx_Tm3Npr&amp;start=37"
         },
         {
           name: "Prakampita Griva",
           image: "/assets/images/Neck Movements/Prakampita.png",
-          meaning: "Moves in forward and backward"
+          meaning: "Moves in forward and backward",
+          videoUrl: "https://www.youtube.com/embed/KUPFrHs57Wo?si=DvVWqxo88PxXae2b&amp;start=48"
         },
       ],
     },
+
     "5": {
       name: "Head Movements",
       items: [
         {
           name: "Samasirah",
           image: "/assets/images/Sama.png",
-          meaning: "Sama"
+          meaning: "Sama",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=KDmjzrY0InHcMl-j&amp;start=68"
         },
         {
           name: "Udvahitam",
           image: "/assets/images/Head Movements/Udvahita.png",
-          meaning: "Up Raised"
+          meaning: "Up Raised",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=i9p-o8_r4hny7FTu&amp;start=82"
         },
         {
           name: "Adhomukhasirah",
           image: "/assets/images/Head Movements/Adhomukha.png",
-          meaning: "Bent"
+          meaning: "Bent",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=F1zvJ-TiE_8o6dFM&amp;start=99"
         },
         {
           name: "Alolitasirah",
           image: "/assets/images/Head Movements/Alolita.png",
-          meaning: "Rolling"
+          meaning: "Rolling",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=egHybyaUK8Opanz1&amp;start=117"
         },
         {
           name: "Dhutasirah",
           image: "/assets/images/Head Movements/Udvahita.png",
-          meaning: "Side Movement"
+          meaning: "Side Movement",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=4grQjXQs1KYMakDw&amp;start=154"
         },
         {
           name: "Kampitasirah",
           image: "/assets/images/Head Movements/Kampita.png",
-          meaning: "Nodding"
+          meaning: "Nodding",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=zIROCDuBSZVD5Dgn&amp;start=169"
         },
         {
           name: "Paravrittasirah",
           image: "/assets/images/Head Movements/Paravrtta.png",
-          meaning: "Turned face"
+          meaning: "Turned face",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=cpRD58Eo6BXBFMZq&amp;start=185"
         },
         {
           name: "Utkshiptasirah",
           image: "/assets/images/Head Movements/Utksipta.png",
-          meaning: "Turned upwards"
+          meaning: "Turned upwards",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=cpRD58Eo6BXBFMZq&amp;start=185"
         },
+        },
+
         {
           name: "Parivahittasirah",
           image: "/assets/images/Head Movements/Parivahita.png",
