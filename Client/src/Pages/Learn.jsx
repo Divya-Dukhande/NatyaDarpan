@@ -330,6 +330,42 @@ const Learn = () => {
         },
       ],
     },
+
+    "3": {
+      name: "Leg Movements",
+      items: [
+        {
+          name: "Udghattita",
+          image: "/assets/images/Udghattita.png",
+          meaning: "The heel rises",
+          videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=c5_S0EF3XaEVOhst&amp;start=26"
+        },
+        {
+          name: "Sama",
+          image: "/assets/images/Sama.png",
+          meaning: "Feet on the ground",
+          videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=qT4koRn9FyWBALWa&amp;start=29"
+        },
+        {
+          name: "Agratalasanchara",
+          image: "/assets/images/Agratalasanchara.png",
+          meaning: "toe touches the ground",
+          videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=s9FifZVo9IOOeXHw&amp;start=32"
+        },
+        {
+          name: "Anchita",
+          image: "/assets/images/Anchita.png",
+          meaning: "Legs on heel",
+          videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=nr1Y_jOzLRwpAG0D&amp;start=35"
+        },
+        {
+          name: "Kunchita",
+          image: "/assets/images/Kunchita.png",
+          meaning: "Fingertips touch the ground",
+          videoUrl: "https://www.youtube.com/embed/FoltqOfRyVk?si=yYkNvB4XsN41tD5p&amp;start=38"
+        },
+      ],
+    },
     
     "4": {
       name: "Neck Movements",
@@ -368,13 +404,13 @@ const Learn = () => {
           name: "Samasirah",
           image: "/assets/images/Sama.png",
           meaning: "Sama",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=KDmjzrY0InHcMl-j&amp;start=68"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=go224llSmXi3uaF9&amp;start=65"
         },
         {
           name: "Udvahitam",
           image: "/assets/images/Head Movements/Udvahita.png",
           meaning: "Up Raised",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=i9p-o8_r4hny7FTu&amp;start=82"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=E-Ixt25gAt69b4sp&amp;start=83"
         },
         {
           name: "Adhomukhasirah",
@@ -386,25 +422,25 @@ const Learn = () => {
           name: "Alolitasirah",
           image: "/assets/images/Head Movements/Alolita.png",
           meaning: "Rolling",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=egHybyaUK8Opanz1&amp;start=117"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=tJhNZCFSANDsv2GI&amp;start=118"
         },
         {
           name: "Dhutasirah",
           image: "/assets/images/Head Movements/Udvahita.png",
           meaning: "Side Movement",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=4grQjXQs1KYMakDw&amp;start=154"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=LaXX3sGwzHgTXQ0M&amp;start=137"
         },
         {
           name: "Kampitasirah",
           image: "/assets/images/Head Movements/Kampita.png",
           meaning: "Nodding",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=zIROCDuBSZVD5Dgn&amp;start=169"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=2CnqGgrPMllMaT89&amp;start=151"
         },
         {
           name: "Paravrittasirah",
           image: "/assets/images/Head Movements/Paravrtta.png",
           meaning: "Turned face",
-          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=cpRD58Eo6BXBFMZq&amp;start=185"
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=FyQvko-9Nu67-m35&amp;start=168"
         },
         {
           name: "Utkshiptasirah",
@@ -415,7 +451,8 @@ const Learn = () => {
         {
           name: "Parivahittasirah",
           image: "/assets/images/Head Movements/Parivahita.png",
-          meaning: "Extensivelt moved"
+          meaning: "Extensivelt moved",
+          videoUrl: "https://www.youtube.com/embed/MUyBQCeyi2k?si=pdP3CngMXl1cJ58p&amp;start=205"
         },
       ],
     },
@@ -426,42 +463,50 @@ const Learn = () => {
         {
           name: "Samadrishti",
           image: "/assets/images/Samadrstih.png",
-          meaning: "Static eye-lashes"
+          meaning: "Static eye-lashes",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=LOC9T2hxd8ZTlK4c"
         },
         {
           name: "Alokitadrstih",
           image: "/assets/images/Eyes Movements/Alokita.png",
-          meaning: "Roll the eyeballs in a circular pattern"
+          meaning: "Roll the eyeballs in a circular pattern",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=EqVfgJzHPiX6_HCT&amp;start=55"
         },
         {
           name: "Sachi",
           image: "/assets/images/Eyes Movements/Saci.png",
-          meaning: "Look through the corner of the eyes"
+          meaning: "Look through the corner of the eyes",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=2TwBKZfDZJLbdT3u&amp;start=58"
         },
         {
           name: "Pralokitadrstih",
           image: "/assets/images/Eyes Movements/Alokita.png",
-          meaning: " Move the eyes side to side"
+          meaning: " Move the eyes side to side",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=lmD2zF4xvqtlo-RD&amp;start=61"
         },
         {
           name: "Nimilitadrstih",
           image: "/assets/images/Eyes Movements/Nimilita.png",
-          meaning: "Keep the eyes half closed"
+          meaning: "Keep the eyes half closed",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=X1APDlCbIEaN-vP2&amp;start=63"
         },
         {
           name: "Ullokitadrstih",
           image: "/assets/images/Eyes Movements/Ullokita.png",
-          meaning: " Look upwards"
+          meaning: " Look upwards",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=Ja2tLssnTBg8rXb_&amp;start=67"
         },
         {
           name: "Anuvrittadrstih",
           image: "/assets/images/Eyes Movements/Anuvrtta.png",
-          meaning: "Move the eyes up and down rapidly"
+          meaning: "Move the eyes up and down rapidly",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=H4BEu6SuNgU7MDR9&amp;start=69"
         },
         {
           name: "Avalokitadrstih",
           image: "/assets/images/Eyes Movements/Avalokita.png",
-          meaning: "Look down"
+          meaning: "Look down",
+          videoUrl: "https://www.youtube.com/embed/Qm_TrdMGbdk?si=BDGMccZ-fv8TPtIs&amp;start=73"
         },
       ],
     },
