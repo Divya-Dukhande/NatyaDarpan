@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Query = require("../models/Query");
+const queryController = require("../controllers/queryController");
 
+router.post("/user", queryController.getUserQueries);
 // POST: User sends a query
 router.post("/add", async (req, res) => {
     try {
@@ -38,5 +40,6 @@ router.put("/:id/respond", async (req, res) => {
         res.status(500).json({ message: "Failed to respond to query" });
     }
 });
+
 
 module.exports = router;

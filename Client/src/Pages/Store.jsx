@@ -187,52 +187,52 @@
 
 
 //             {/* Cart Sidebar */}
-            // <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transition-transform duration-300 z-[100] ${cartOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            //     <div className="p-4 h-full flex flex-col">
-            //         <button onClick={() => setCartOpen(false)} className="absolute top-2 right-2 text-gray-600">
-            //             <FaTimes size={20} />
-            //         </button>
-            //         <h2 className="text-lg font-semibold">Shopping Cart</h2>
-            //         <div className="flex-grow overflow-y-auto mt-4">
-            //             {cart.length > 0 ? (
-            //                 <ul>
-            //                     {cart.map((item) => (
-            //                         <li key={item._id} className="flex justify-between items-center my-2 border-b pb-2">
-            //                             <div className="flex items-center gap-2">
-            //                                 <img src={item.productId.image} alt={item.productId.name} className="w-12 h-12 object-cover rounded" />
-            //                                 <div>
-            //                                     <p>{item.productId.name}</p>
-            //                                     <p className="text-sm text-gray-600 ">₹{item.productId.price} x {item.quantity}</p>
-            //                                 </div>
-            //                             </div>
-            //                             <div className="flex gap-2">
-            //                                 <button onClick={() => handleDecreaseQuantity(item.productId._id)} className="bg-gray-300 p-2 rounded">
-            //                                     <FaMinus />
-            //                                 </button>
-            //                                 <button onClick={() => handleAddToCart(item.productId)} className="bg-gray-300 p-2 rounded">
-            //                                     <FaPlus />
-            //                                 </button>
-            //                                 <button onClick={() => handleRemoveFromCart(item.productId._id)} className="bg-red-500 text-white p-2 rounded">
-            //                                     <FaTimes />
-            //                                 </button>
-            //                             </div>
-            //                         </li>
-            //                     ))}
-            //                 </ul>
-            //             ) : (
-            //                 <p className="text-sm text-gray-500 text-center">Cart is empty</p>
-            //             )}
-            //         </div>
-            //         {cart.length > 0 && (
-            //             <div className="mt-4 text-right font-semibold border-t pt-2">
-            //                 <p>Total: ₹{totalPrice}</p>
-            //                 <button onClick={() => setIsAddressModalOpen(true)} className="mt-2 bg-green-500 text-white py-2 px-4 rounded-full w-full hover:bg-green-600 transition-colors">
-            //                     Buy Now
-            //                 </button>
-            //             </div>
-            //         )}
-            //     </div>
-            // </div>
+// <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transition-transform duration-300 z-[100] ${cartOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+//     <div className="p-4 h-full flex flex-col">
+//         <button onClick={() => setCartOpen(false)} className="absolute top-2 right-2 text-gray-600">
+//             <FaTimes size={20} />
+//         </button>
+//         <h2 className="text-lg font-semibold">Shopping Cart</h2>
+//         <div className="flex-grow overflow-y-auto mt-4">
+//             {cart.length > 0 ? (
+//                 <ul>
+//                     {cart.map((item) => (
+//                         <li key={item._id} className="flex justify-between items-center my-2 border-b pb-2">
+//                             <div className="flex items-center gap-2">
+//                                 <img src={item.productId.image} alt={item.productId.name} className="w-12 h-12 object-cover rounded" />
+//                                 <div>
+//                                     <p>{item.productId.name}</p>
+//                                     <p className="text-sm text-gray-600 ">₹{item.productId.price} x {item.quantity}</p>
+//                                 </div>
+//                             </div>
+//                             <div className="flex gap-2">
+//                                 <button onClick={() => handleDecreaseQuantity(item.productId._id)} className="bg-gray-300 p-2 rounded">
+//                                     <FaMinus />
+//                                 </button>
+//                                 <button onClick={() => handleAddToCart(item.productId)} className="bg-gray-300 p-2 rounded">
+//                                     <FaPlus />
+//                                 </button>
+//                                 <button onClick={() => handleRemoveFromCart(item.productId._id)} className="bg-red-500 text-white p-2 rounded">
+//                                     <FaTimes />
+//                                 </button>
+//                             </div>
+//                         </li>
+//                     ))}
+//                 </ul>
+//             ) : (
+//                 <p className="text-sm text-gray-500 text-center">Cart is empty</p>
+//             )}
+//         </div>
+//         {cart.length > 0 && (
+//             <div className="mt-4 text-right font-semibold border-t pt-2">
+//                 <p>Total: ₹{totalPrice}</p>
+//                 <button onClick={() => setIsAddressModalOpen(true)} className="mt-2 bg-green-500 text-white py-2 px-4 rounded-full w-full hover:bg-green-600 transition-colors">
+//                     Buy Now
+//                 </button>
+//             </div>
+//         )}
+//     </div>
+// </div>
 
 //             {/* Filters Section */}
 //             <div className="mb-4 flex flex-wrap gap-4 items-center">
@@ -379,28 +379,46 @@ const Store = () => {
         }
     }, [token, dispatch]);
 
-    const handleAddToCart = (product) => {
+    const handleAddToCart = async (product) => {
         if (!token) {
             toast.error('Please log in to add items to the cart.');
             return;
         }
-        dispatch(addToCart({ productId: product._id, quantity: 1, token }));
-        toast.success(`${product.name} added to cart!`);
-    };
 
-    const handleDecreaseQuantity = (productId) => {
+        try {
+            await dispatch(addToCart({ productId: product._id, quantity: 1, token })).unwrap();
+            await dispatch(fetchCart(token));
+            toast.success(`${product.name} added to cart!`);
+        } catch (error) {
+            toast.error('Failed to add to cart.');
+            console.error(error);
+        }
+    };
+    const handleDecreaseQuantity = async (productId) => {
         const product = cart.find(item => item.productId._id === productId);
         if (product && product.quantity > 1) {
-            dispatch(decreaseQuantity({ productId, quantity: -1, token }));
-            toast.success('Quantity updated!');
+            try {
+                await dispatch(decreaseQuantity({ productId, quantity: -1, token })).unwrap();
+                await dispatch(fetchCart(token));
+                toast.success('Quantity updated!');
+            } catch (error) {
+                toast.error('Failed to update quantity.');
+                console.error(error);
+            }
         } else {
             toast.error('Cannot decrease quantity below 1');
         }
     };
-
-    const handleRemoveFromCart = (productId) => {
-        dispatch(removeFromCart({ productId, token }));
-        toast.success('Item removed from cart!');
+    // Remove from Cart
+    const handleRemoveFromCart = async (productId) => {
+        try {
+            await dispatch(removeFromCart({ productId, token })).unwrap();
+            await dispatch(fetchCart(token));
+            toast.success('Item removed from cart!');
+        } catch (error) {
+            toast.error('Failed to remove item.');
+            console.error(error);
+        }
     };
 
     const handleBuyNow = async () => {
@@ -508,7 +526,7 @@ const Store = () => {
         <div className="container mx-auto p-4 mt-28 relative">
             {loading && <div className="text-center text-lg font-semibold">Loading products...</div>}
 
-            <div className="fixed top-6 right-6 z-50">
+            {/* <div className="fixed top-6 right-6 z-50">
                 <button onClick={() => setCartOpen(true)} className="relative">
                     <FaShoppingCart className="w-8 h-8 text-gray-800" />
                     {cart.length > 0 && (
@@ -517,7 +535,7 @@ const Store = () => {
                         </span>
                     )}
                 </button>
-            </div>
+            </div> */}
 
 
 
@@ -534,7 +552,7 @@ const Store = () => {
                                 {cart.map((item) => (
                                     <li key={item._id} className="flex justify-between items-center my-2 border-b pb-2">
                                         <div className="flex items-center gap-2">
-                                            <img src={item.productId.image} alt={item.productId.name} className="h-full w-auto object-contain" />
+                                            <img src={item.productId.image} alt={item.productId.name} className="h-[42px] w-[42px] object-contain" />
                                             <div>
                                                 <p>{item.productId.name}</p>
                                                 <p className="text-sm text-gray-600">₹{item.productId.price} x {item.quantity}</p>
@@ -570,29 +588,52 @@ const Store = () => {
             </div>
 
             {/* Filters Section */}
-            <div className="mb-4 flex flex-wrap gap-4 items-center">
-                <input
-                    type="text"
-                    placeholder="Search product..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="p-2 border border-gray-300 rounded w-64"
-                />
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-4 w-full">
+                {/* Left side: Search and filters */}
+                <div className="flex flex-wrap items-center gap-4">
+                    <input
+                        type="text"
+                        placeholder="Search product..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="p-2 border border-gray-300 rounded w-64"
+                    />
 
-                {/* Price Range Dropdown */}
-                <select value={selectedPriceRange} onChange={handlePriceChange} className="p-2 border border-gray-300 rounded w-48">
-                    <option value="">Select Price Range</option>
-                    <option value="0-500">₹0 - ₹500</option>
-                    <option value="500-1000">₹500 - ₹1000</option>
-                    <option value="1000-2000">₹1000 - ₹2000</option>
-                    <option value="2000-5000">₹2000 - ₹5000</option>
-                    <option value="5000-10000">₹5000 - ₹10000</option>
-                </select>
+                    {/* Price Range Dropdown */}
+                    <select
+                        value={selectedPriceRange}
+                        onChange={handlePriceChange}
+                        className="p-2 border border-gray-300 rounded w-48"
+                    >
+                        <option value="">Select Price Range</option>
+                        <option value="0-500">₹0 - ₹500</option>
+                        <option value="500-1000">₹500 - ₹1000</option>
+                        <option value="1000-2000">₹1000 - ₹2000</option>
+                        <option value="2000-5000">₹2000 - ₹5000</option>
+                        <option value="5000-10000">₹5000 - ₹10000</option>
+                    </select>
 
-                <button onClick={handleClearFilters} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-                    Clear Filters
-                </button>
+                    <button
+                        onClick={handleClearFilters}
+                        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                    >
+                        Clear Filters
+                    </button>
+                </div>
+
+                {/* Right side: Cart Icon */}
+                <div>
+                    <button onClick={() => setCartOpen(true)} className="relative">
+                        <FaShoppingCart className="w-8 h-8 text-gray-800" />
+                        {cart.length > 0 && (
+                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                                {cart.length}
+                            </span>
+                        )}
+                    </button>
+                </div>
             </div>
+
 
             {/* Products List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

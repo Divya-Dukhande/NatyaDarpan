@@ -102,6 +102,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { FaBell } from 'react-icons/fa';
 import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast';
 import client from '../lib/axios';
@@ -121,8 +122,8 @@ const Navbar = ({ username, isAdmin }) => {
   //   const newReplies = queries.filter(query => query.response).length;
   //   setUnreadCount(newReplies);
   // }, [queries]);
-  
-  
+
+
   const handleLogout = async () => {
     try {
       await client.delete('/auth/logout'); // Adjust endpoint if needed
@@ -181,9 +182,22 @@ const Navbar = ({ username, isAdmin }) => {
                 </Link>
               </li>
             ))}
+
+            {/* 🔔 Notification Icon Link */}
+            <li>
+              <Link
+                to="/notifications"
+                className={`flex items-center text-black hover:text-red-500 transition-colors px-3 py-2 rounded-lg ${location.pathname === "/notifications"
+                    ? "bg-red-500 text-white font-bold"
+                    : ""
+                  }`}
+              >
+                <FaBell className="text-xl" />
+              </Link>
+            </li>
           </ul>
 
-          
+
 
           {/* Authentication Buttons */}
           <div className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">
