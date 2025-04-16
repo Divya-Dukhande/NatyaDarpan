@@ -9,7 +9,7 @@ import { selectUser, selectUsername } from "../../redux/features/auth/authSlice"
 const ContactForm = () => {
     const dispatch = useDispatch();
     const [query, setQuery] = useState("");
-    const username = useSelector(selectUsername) // ✅ Added
+    const username = useSelector(selectUsername) // Added
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,9 +21,9 @@ const ContactForm = () => {
 
 
         try {
-            await dispatch(submitQuery({ message: query, username })); // ✅ Included username
+            await dispatch(submitQuery({ message: query, username })); // Included username
             toast.success("Query submitted successfully!");
-            setQuery(""); // ✅ Clear Input
+            setQuery(""); //  Clear Input
         } catch (error) {
             toast.error("Failed to submit query!");
             console.error("Submit Query Error:", error);
