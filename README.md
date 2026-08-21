@@ -1,5 +1,5 @@
 
-# Project Title: Providing Education and Employment Options for Housewives
+# Project Title: NatyaDarpan: A Webapp to Learn and Shop Bharatanatyam
 
 ## 1. Introduction
 
