@@ -1,5 +1,5 @@
 
-**NatyaDarpan: A Webapp to Learn and Shop Bharatanatyam**
+###**NatyaDarpan: A Webapp to Learn and Shop Bharatanatyam**
 
 ## 1. Introduction
 
