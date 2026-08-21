@@ -1,5 +1,5 @@
 
-###**NatyaDarpan: A Webapp to Learn and Shop Bharatanatyam**
+Project Title: Providing Education and Employment Options for Housewives
 
 ## 1. Introduction
 
